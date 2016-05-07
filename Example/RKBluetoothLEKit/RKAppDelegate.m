@@ -7,7 +7,7 @@
 //
 
 #import "RKAppDelegate.h"
-
+#import <RKBluetoothLE_iOS/BLERequest.h>
 @implementation RKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

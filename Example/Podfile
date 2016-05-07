@@ -1,10 +1,10 @@
 use_frameworks!
 
-target 'RKBluetoothLEKit_Example', :exclusive => true do
+target 'RKBluetoothLEKit_Example' do
   pod 'RKBluetoothLEKit', :path => '../'
 end
 
-target 'RKBluetoothLEKit_Tests', :exclusive => true do
+target 'RKBluetoothLEKit_Tests' do
   pod 'RKBluetoothLEKit', :path => '../'
 
   pod 'Specta'

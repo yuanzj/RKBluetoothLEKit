@@ -29,14 +29,15 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'RKBluetoothLEKit/Classes/**/*'
-  
+  # s.source_files = 'RKBluetoothLEKit/Classes/**/*'
   # s.resource_bundles = {
   #   'RKBluetoothLEKit' => ['RKBluetoothLEKit/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'RKBluetoothLE_iOS'
+  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '/Applications/Xcode.app/Contents/Developer/Library/Frameworks' }
+  s.vendored_frameworks = 'RKBluetoothLE_iOS.framework'
+  s.dependency 'ReactiveCocoa'
+  s.dependency 'CocoaSecurity'
 end

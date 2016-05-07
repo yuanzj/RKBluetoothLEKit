@@ -1,0 +1,53 @@
+PODS:
+  - CocoaSecurity (1.2.4)
+  - Expecta (1.0.5)
+  - Expecta+Snapshots (3.0.0):
+    - Expecta (~> 1.0)
+    - FBSnapshotTestCase/Core (~> 2.0)
+    - Specta (~> 1.0)
+  - FBSnapshotTestCase (2.1.0):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.0)
+  - FBSnapshotTestCase/Core (2.1.0)
+  - FBSnapshotTestCase/SwiftSupport (2.1.0):
+    - FBSnapshotTestCase/Core
+  - ReactiveCocoa (4.1.0):
+    - ReactiveCocoa/UI (= 4.1.0)
+    - Result (~> 2.0)
+  - ReactiveCocoa/Core (4.1.0):
+    - ReactiveCocoa/no-arc
+    - Result (~> 2.0)
+  - ReactiveCocoa/no-arc (4.1.0):
+    - Result (~> 2.0)
+  - ReactiveCocoa/UI (4.1.0):
+    - ReactiveCocoa/Core
+    - Result (~> 2.0)
+  - Result (2.0.0)
+  - RKBluetoothLEKit (0.1.0):
+    - CocoaSecurity
+    - ReactiveCocoa
+  - Specta (1.0.5)
+
+DEPENDENCIES:
+  - Expecta
+  - Expecta+Snapshots
+  - FBSnapshotTestCase
+  - RKBluetoothLEKit (from `../`)
+  - Specta
+
+EXTERNAL SOURCES:
+  RKBluetoothLEKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  Expecta+Snapshots: c343f410c7a6392f3e22e78f94c44b6c0749a516
+  FBSnapshotTestCase: 366ecd378511d7716c79991cd8067d1eed23578d
+  ReactiveCocoa: d70004d7a366a7b8e87e60ce2347182c77701949
+  Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  RKBluetoothLEKit: f050f7c077e1f8f2252917b079b08de204981377
+  Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
+
+PODFILE CHECKSUM: a9d31f3849f718fe641f0b73afc79dae523a1532
+
+COCOAPODS: 1.0.0.rc.2
