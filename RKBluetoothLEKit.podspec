@@ -24,21 +24,24 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/yuanzj/RKBluetoothLEKit"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "yuanzhijian" => "zhijian.yuan@rokyinfo.com" }
+  s.author           = { "yuanzj" => "jswxyzj@qq.com" }
   s.source           = { :git => "https://github.com/yuanzj/RKBluetoothLEKit.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.platform     = :ios, '8.0'
+  s.requires_arc = true
+
   # s.source_files = 'RKBluetoothLEKit/Classes/**/*'
+  
   # s.resource_bundles = {
   #   'RKBluetoothLEKit' => ['RKBluetoothLEKit/Assets/*.png']
   # }
 
-  s.requires_arc = true
-  s.preserve_paths = 'RKBluetoothLE_iOS.framework'
-  s.public_header_files = '*.framework/Headers/*.h'
-  s.vendored_frameworks = 'RKBluetoothLE_iOS.framework'
-
-  s.dependency 'ReactiveCocoa'
-  s.dependency 'CocoaSecurity'
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.frameworks = 'Foundation', 'CoreBluetooth'
+  s.dependency 'ReactiveCocoa', '~> 4.1.0'
+  s.dependency 'CocoaSecurity', '~> 1.2.4'
+  s.vendored_frameworks = 'RKBluetoothLEKit/*.{framework}'
+  
 end

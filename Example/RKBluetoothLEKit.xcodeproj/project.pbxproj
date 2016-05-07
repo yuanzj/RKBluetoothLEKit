@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01A57F1D94B933E2110DDAA1 /* Pods_RKBluetoothLEKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA1608054432D397B7D6E7F /* Pods_RKBluetoothLEKit_Tests.framework */; };
-		1843FFC41CDDB84100C100CC /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1843FFC31CDDB84100C100CC /* CoreBluetooth.framework */; };
-		1843FFCA1CDDD24300C100CC /* RKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843FFC91CDDD24300C100CC /* RKTableViewController.m */; };
-		1843FFCC1CDDD43900C100CC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1843FFCB1CDDD43900C100CC /* Launch Screen.storyboard */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -24,7 +20,10 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		CF8702BF6FE4FF99CD40A1A8 /* Pods_RKBluetoothLEKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F065E9464D37620CF73998 /* Pods_RKBluetoothLEKit_Example.framework */; };
+		F58AC30F1CDE35F5001C5D4C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58AC30C1CDE35F5001C5D4C /* Launch Screen.storyboard */; };
+		F58AC3101CDE35F5001C5D4C /* RKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F58AC30E1CDE35F5001C5D4C /* RKTableViewController.m */; };
+		FBEB970E01196572D5CCA275 /* Pods_RKBluetoothLEKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB91561CE6CE0941B6F7B173 /* Pods_RKBluetoothLEKit_Tests.framework */; };
+		FCF7366C28BA30C1FECC396D /* Pods_RKBluetoothLEKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EE378D8B0EA27A36650FB6 /* Pods_RKBluetoothLEKit_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,14 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0DFB14AD3525884E61C44F9C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		12855F99880C3C816DBD6623 /* RKBluetoothLEKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RKBluetoothLEKit.podspec; path = ../RKBluetoothLEKit.podspec; sourceTree = "<group>"; };
-		1843FFC31CDDB84100C100CC /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		1843FFC81CDDD24300C100CC /* RKTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTableViewController.h; sourceTree = "<group>"; };
-		1843FFC91CDDD24300C100CC /* RKTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTableViewController.m; sourceTree = "<group>"; };
-		1843FFCB1CDDD43900C100CC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		39F065E9464D37620CF73998 /* Pods_RKBluetoothLEKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKBluetoothLEKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BD62C6ED3AD0FF28233C1BD /* Pods-RKBluetoothLEKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKBluetoothLEKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKBluetoothLEKit_Tests/Pods-RKBluetoothLEKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		072F1564ADD7AD068764A818 /* Pods-RKBluetoothLEKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKBluetoothLEKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKBluetoothLEKit_Example/Pods-RKBluetoothLEKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		1A96EC56B52DAC5839E644BB /* Pods-RKBluetoothLEKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKBluetoothLEKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKBluetoothLEKit_Tests/Pods-RKBluetoothLEKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2B0297C41A6CE7355B6F5392 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3924DD9DBA45505B1F2067BC /* Pods-RKBluetoothLEKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKBluetoothLEKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RKBluetoothLEKit_Example/Pods-RKBluetoothLEKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* RKBluetoothLEKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RKBluetoothLEKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,12 +58,15 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		67604DBC14907FFD6C289AB8 /* Pods-RKBluetoothLEKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKBluetoothLEKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RKBluetoothLEKit_Tests/Pods-RKBluetoothLEKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		6CA1608054432D397B7D6E7F /* Pods_RKBluetoothLEKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKBluetoothLEKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74C8E256D2E7C8C7F37A0E72 /* Pods-RKBluetoothLEKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKBluetoothLEKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RKBluetoothLEKit_Example/Pods-RKBluetoothLEKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		64EE378D8B0EA27A36650FB6 /* Pods_RKBluetoothLEKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKBluetoothLEKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69AB76A946405E4EB2F48A47 /* Pods-RKBluetoothLEKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKBluetoothLEKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RKBluetoothLEKit_Tests/Pods-RKBluetoothLEKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		B13A640DC6E10939BB392608 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E71A2830AB52D5972BC4CCA6 /* Pods-RKBluetoothLEKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKBluetoothLEKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKBluetoothLEKit_Example/Pods-RKBluetoothLEKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		AB91561CE6CE0941B6F7B173 /* Pods_RKBluetoothLEKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKBluetoothLEKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6FC45183674717709E41BF4 /* RKBluetoothLEKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RKBluetoothLEKit.podspec; path = ../RKBluetoothLEKit.podspec; sourceTree = "<group>"; };
+		F58AC30C1CDE35F5001C5D4C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F58AC30D1CDE35F5001C5D4C /* RKTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTableViewController.h; sourceTree = "<group>"; };
+		F58AC30E1CDE35F5001C5D4C /* RKTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTableViewController.m; sourceTree = "<group>"; };
+		F5C09578421806A7125560FA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1843FFC41CDDB84100C100CC /* CoreBluetooth.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				CF8702BF6FE4FF99CD40A1A8 /* Pods_RKBluetoothLEKit_Example.framework in Frameworks */,
+				FCF7366C28BA30C1FECC396D /* Pods_RKBluetoothLEKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				01A57F1D94B933E2110DDAA1 /* Pods_RKBluetoothLEKit_Tests.framework in Frameworks */,
+				FBEB970E01196572D5CCA275 /* Pods_RKBluetoothLEKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +103,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				CDFAB05D659C939535FA2EFE /* Pods */,
+				62E3633C58D84DD8BAF71C84 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,13 +119,12 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1843FFC31CDDB84100C100CC /* CoreBluetooth.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				39F065E9464D37620CF73998 /* Pods_RKBluetoothLEKit_Example.framework */,
-				6CA1608054432D397B7D6E7F /* Pods_RKBluetoothLEKit_Tests.framework */,
+				64EE378D8B0EA27A36650FB6 /* Pods_RKBluetoothLEKit_Example.framework */,
+				AB91561CE6CE0941B6F7B173 /* Pods_RKBluetoothLEKit_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,14 +132,14 @@
 		6003F593195388D20070C39A /* Example for RKBluetoothLEKit */ = {
 			isa = PBXGroup;
 			children = (
+				F58AC30C1CDE35F5001C5D4C /* Launch Screen.storyboard */,
+				F58AC30D1CDE35F5001C5D4C /* RKTableViewController.h */,
+				F58AC30E1CDE35F5001C5D4C /* RKTableViewController.m */,
 				6003F59C195388D20070C39A /* RKAppDelegate.h */,
 				6003F59D195388D20070C39A /* RKAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				1843FFC81CDDD24300C100CC /* RKTableViewController.h */,
-				1843FFC91CDDD24300C100CC /* RKTableViewController.m */,
-				1843FFCB1CDDD43900C100CC /* Launch Screen.storyboard */,
 			);
 			name = "Example for RKBluetoothLEKit";
 			path = RKBluetoothLEKit;
@@ -182,20 +178,20 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				12855F99880C3C816DBD6623 /* RKBluetoothLEKit.podspec */,
-				B13A640DC6E10939BB392608 /* README.md */,
-				0DFB14AD3525884E61C44F9C /* LICENSE */,
+				E6FC45183674717709E41BF4 /* RKBluetoothLEKit.podspec */,
+				2B0297C41A6CE7355B6F5392 /* README.md */,
+				F5C09578421806A7125560FA /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		CDFAB05D659C939535FA2EFE /* Pods */ = {
+		62E3633C58D84DD8BAF71C84 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				74C8E256D2E7C8C7F37A0E72 /* Pods-RKBluetoothLEKit_Example.debug.xcconfig */,
-				E71A2830AB52D5972BC4CCA6 /* Pods-RKBluetoothLEKit_Example.release.xcconfig */,
-				67604DBC14907FFD6C289AB8 /* Pods-RKBluetoothLEKit_Tests.debug.xcconfig */,
-				5BD62C6ED3AD0FF28233C1BD /* Pods-RKBluetoothLEKit_Tests.release.xcconfig */,
+				3924DD9DBA45505B1F2067BC /* Pods-RKBluetoothLEKit_Example.debug.xcconfig */,
+				072F1564ADD7AD068764A818 /* Pods-RKBluetoothLEKit_Example.release.xcconfig */,
+				69AB76A946405E4EB2F48A47 /* Pods-RKBluetoothLEKit_Tests.debug.xcconfig */,
+				1A96EC56B52DAC5839E644BB /* Pods-RKBluetoothLEKit_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -207,12 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "RKBluetoothLEKit_Example" */;
 			buildPhases = (
-				DA98FE45610A75B357F4C0DD /* 📦 Check Pods Manifest.lock */,
+				5AA2B2ABDF0F7D2608940DEB /* 📦 Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				1766A9DED4AD6C260CB8824F /* 📦 Embed Pods Frameworks */,
-				53004D70FC25A9098E925867 /* 📦 Copy Pods Resources */,
+				2B3CDB91CAF4418CCDE6E7C7 /* 📦 Embed Pods Frameworks */,
+				9283827B7A501297C4A96923 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,12 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "RKBluetoothLEKit_Tests" */;
 			buildPhases = (
-				A7038F1ADCD2621F12644F1F /* 📦 Check Pods Manifest.lock */,
+				1CD1DD328EA53ABF97ABB837 /* 📦 Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				83B20DB577EFB42AE55907E7 /* 📦 Embed Pods Frameworks */,
-				80B7F13488BD0A88B647E2DD /* 📦 Copy Pods Resources */,
+				C07C11A930EAA1C6DF51C440 /* 📦 Embed Pods Frameworks */,
+				635AEF8B0B5C181E77FBD3F5 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,7 +248,7 @@
 			attributes = {
 				CLASSPREFIX = RK;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = yuanzhijian;
+				ORGANIZATIONNAME = yuanzj;
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -285,7 +281,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				1843FFCC1CDDD43900C100CC /* Launch Screen.storyboard in Resources */,
+				F58AC30F1CDE35F5001C5D4C /* Launch Screen.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +297,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1766A9DED4AD6C260CB8824F /* 📦 Embed Pods Frameworks */ = {
+		1CD1DD328EA53ABF97ABB837 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2B3CDB91CAF4418CCDE6E7C7 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,22 +327,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RKBluetoothLEKit_Example/Pods-RKBluetoothLEKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		53004D70FC25A9098E925867 /* 📦 Copy Pods Resources */ = {
+		5AA2B2ABDF0F7D2608940DEB /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RKBluetoothLEKit_Example/Pods-RKBluetoothLEKit_Example-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		80B7F13488BD0A88B647E2DD /* 📦 Copy Pods Resources */ = {
+		635AEF8B0B5C181E77FBD3F5 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -346,7 +357,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RKBluetoothLEKit_Tests/Pods-RKBluetoothLEKit_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		83B20DB577EFB42AE55907E7 /* 📦 Embed Pods Frameworks */ = {
+		9283827B7A501297C4A96923 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RKBluetoothLEKit_Example/Pods-RKBluetoothLEKit_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C07C11A930EAA1C6DF51C440 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,36 +387,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RKBluetoothLEKit_Tests/Pods-RKBluetoothLEKit_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A7038F1ADCD2621F12644F1F /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DA98FE45610A75B357F4C0DD /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -400,7 +396,7 @@
 			files = (
 				6003F59E195388D20070C39A /* RKAppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				1843FFCA1CDDD24300C100CC /* RKTableViewController.m in Sources */,
+				F58AC3101CDE35F5001C5D4C /* RKTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,19 +513,10 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74C8E256D2E7C8C7F37A0E72 /* Pods-RKBluetoothLEKit_Example.debug.xcconfig */;
+			baseConfigurationReference = 3924DD9DBA45505B1F2067BC /* Pods-RKBluetoothLEKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Library/Frameworks,
-					"\"$PODS_CONFIGURATION_BUILD_DIR/CocoaSecurity\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/ReactiveCocoa\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/Result\"",
-					"\"${PODS_ROOT}/../..\"",
-					"\"$(SRCROOT)/../RKBluetoothLE_iOS.framework\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RKBluetoothLEKit/RKBluetoothLEKit-Prefix.pch";
 				INFOPLIST_FILE = "RKBluetoothLEKit/RKBluetoothLEKit-Info.plist";
@@ -542,19 +529,10 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E71A2830AB52D5972BC4CCA6 /* Pods-RKBluetoothLEKit_Example.release.xcconfig */;
+			baseConfigurationReference = 072F1564ADD7AD068764A818 /* Pods-RKBluetoothLEKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Library/Frameworks,
-					"\"$PODS_CONFIGURATION_BUILD_DIR/CocoaSecurity\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/ReactiveCocoa\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/Result\"",
-					"\"${PODS_ROOT}/../..\"",
-					"\"$(SRCROOT)/../RKBluetoothLE_iOS.framework\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RKBluetoothLEKit/RKBluetoothLEKit-Prefix.pch";
 				INFOPLIST_FILE = "RKBluetoothLEKit/RKBluetoothLEKit-Info.plist";
@@ -567,7 +545,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67604DBC14907FFD6C289AB8 /* Pods-RKBluetoothLEKit_Tests.debug.xcconfig */;
+			baseConfigurationReference = 69AB76A946405E4EB2F48A47 /* Pods-RKBluetoothLEKit_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -591,7 +569,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BD62C6ED3AD0FF28233C1BD /* Pods-RKBluetoothLEKit_Tests.release.xcconfig */;
+			baseConfigurationReference = 1A96EC56B52DAC5839E644BB /* Pods-RKBluetoothLEKit_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

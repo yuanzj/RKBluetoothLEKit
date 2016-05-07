@@ -102,7 +102,7 @@
     
     switch (indexPath.row) {
         case 0:
-            
+            [self lock];
             break;
         case 1:
             
@@ -118,7 +118,12 @@
 
 -(void)lock{
     
-    [RK410APIServiceImpl lock:@"B00G20B6T3"] ;
+    [[RK410APIServiceImpl lock:@"B00G20B6T3"] subscribeNext:^(RemoteControlResult *response){
+    
+    } error:^(NSError *error){
+        
+    }];
+    
 }
 
 

@@ -1,31 +1,32 @@
 {
   "name": "RKBluetoothLEKit",
   "version": "0.1.0",
-  "summary": "A short description of RKBluetoothLEKit.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/RKBluetoothLEKit",
+  "summary": "车精灵中控蓝牙SDK",
+  "description": "车精灵中控蓝牙SDK",
+  "homepage": "https://github.com/yuanzj/RKBluetoothLEKit",
   "license": "MIT",
   "authors": {
-    "yuanzhijian": "zhijian.yuan@rokyinfo.com"
+    "yuanzj": "jswxyzj@qq.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/RKBluetoothLEKit.git",
+    "git": "https://github.com/yuanzj/RKBluetoothLEKit.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "frameworks": "RKBluetoothLE_iOS",
-  "xcconfig": {
-    "FRAMEWORK_SEARCH_PATHS": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks"
-  },
-  "vendored_frameworks": "RKBluetoothLE_iOS.framework",
+  "requires_arc": true,
+  "frameworks": [
+    "Foundation",
+    "CoreBluetooth"
+  ],
   "dependencies": {
     "ReactiveCocoa": [
-
+      "~> 4.1.0"
     ],
     "CocoaSecurity": [
-
+      "~> 1.2.4"
     ]
-  }
+  },
+  "vendored_frameworks": "RKBluetoothLEKit/*.{framework}"
 }
