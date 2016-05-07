@@ -34,10 +34,11 @@ Pod::Spec.new do |s|
   #   'RKBluetoothLEKit' => ['RKBluetoothLEKit/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'RKBluetoothLE_iOS'
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '/Applications/Xcode.app/Contents/Developer/Library/Frameworks' }
+  s.requires_arc = true
+  s.preserve_paths = 'RKBluetoothLE_iOS.framework'
+  s.public_header_files = '*.framework/Headers/*.h'
   s.vendored_frameworks = 'RKBluetoothLE_iOS.framework'
+
   s.dependency 'ReactiveCocoa'
   s.dependency 'CocoaSecurity'
 end

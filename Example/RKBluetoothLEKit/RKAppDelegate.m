@@ -7,12 +7,16 @@
 //
 
 #import "RKAppDelegate.h"
-#import <RKBluetoothLE_iOS/BLERequest.h>
+
 @implementation RKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.mRkBluetoothClient = [RkBluetoothClient shareClient];
+    self.mRK410APIService = [self.mRkBluetoothClient createRk410ApiService];
+    
+    
     return YES;
 }
 
