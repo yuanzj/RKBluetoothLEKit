@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-车精灵中控蓝牙SDK
+车精灵中控蓝牙SDK,提供车辆操控、个性化、自检等功能。API调用模式使用了RAC
                        DESC
 
   s.homepage         = "https://github.com/yuanzj/RKBluetoothLEKit"
