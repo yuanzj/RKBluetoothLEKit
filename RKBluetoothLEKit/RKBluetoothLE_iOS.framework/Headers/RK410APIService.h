@@ -17,6 +17,7 @@
 #import "VehicleStatus.h"
 #import "Fault.h"
 #import "ECUParameter.h"
+#import "ConfigResult.h"
 
 //鉴权码生成器
 typedef id (^PostAuthCode)(NSString *peripheralName);
@@ -81,6 +82,26 @@ typedef id (^PostAuthCode)(NSString *peripheralName);
  *  @return Fault
  */
 -(RACSignal*)getFault:(NSString*)target;
+
+/**
+ *  设置中控参数
+ *
+ *  @param target
+ *  @param ECUParameter
+ *
+ *  @return ConfigResult
+ */
+-(RACSignal*)setECUParameter:(NSString*)target parameter:(ECUParameter*)_ECUParameter;
+
+
+/**
+ *  获取中控参数
+ *
+ *  @param target
+ *
+ *  @return ECUParameter
+ */
+-(RACSignal*)getECUParameter:(NSString*)target;
 
 /**
  *  启动升级

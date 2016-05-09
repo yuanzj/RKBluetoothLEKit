@@ -16,6 +16,10 @@
 		<data>
 		YX4TSQJNIWa4uRgq0uo37dfzRQc=
 		</data>
+		<key>Headers/BaseParameter.h</key>
+		<data>
+		dFMo/pKrPjdvTucRS4+CHmuj7p0=
+		</data>
 		<key>Headers/Bluetooth.h</key>
 		<data>
 		GQ24gilm8SEL8+EOxWPRhJ2ka10=
@@ -24,6 +28,10 @@
 		<data>
 		U6mtDi1MOrAzxTthPTZh169BrT0=
 		</data>
+		<key>Headers/ConfigResult.h</key>
+		<data>
+		IkBymmrZ/dao1uCvH7Vm2UzTtLU=
+		</data>
 		<key>Headers/DefaultBLEDataParseProtocol.h</key>
 		<data>
 		aacDzUQPZegVGg0H2zWDUNusfrY=
@@ -31,6 +39,10 @@
 		<key>Headers/DefaultRetryPolicy.h</key>
 		<data>
 		AqO0UmPv2nb5nH74zblSh1LrHTE=
+		</data>
+		<key>Headers/ECUParameter.h</key>
+		<data>
+		034Pq2bzfbaq+P2ojkbgK8O3k5c=
 		</data>
 		<key>Headers/ExecutorDelivery.h</key>
 		<data>
@@ -46,7 +58,7 @@
 		</data>
 		<key>Headers/RK410APIService.h</key>
 		<data>
-		hWc9Ny0YbxBnuPL6dANUC0lV2sA=
+		htC3pYqqAdpbJlIKJb7XSIGj4To=
 		</data>
 		<key>Headers/RKBLEDispatcher.h</key>
 		<data>
@@ -62,7 +74,7 @@
 		</data>
 		<key>Headers/RKBluetoothLE-iOS-umbrella.h</key>
 		<data>
-		yowv1adMlziZKVnX1d16ETb3l2c=
+		1nvh0Jxpmya15O4VhHlM+7FWnno=
 		</data>
 		<key>Headers/RKFrame.h</key>
 		<data>
@@ -160,6 +172,17 @@
 			59O+xdYvQoxijtiPndTrvoOFJ5zoGVUaj4Hf9FC5CdU=
 			</data>
 		</dict>
+		<key>Headers/BaseParameter.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dFMo/pKrPjdvTucRS4+CHmuj7p0=
+			</data>
+			<key>hash2</key>
+			<data>
+			KXDj37sxGu72Q3+dUlQoTmNQzovL5gs4BrGSL85B6+k=
+			</data>
+		</dict>
 		<key>Headers/Bluetooth.h</key>
 		<dict>
 			<key>hash</key>
@@ -182,6 +205,17 @@
 			FKhxdGmLlxHysk3mzBthYidhAADEc4fkR44C2u0H5g0=
 			</data>
 		</dict>
+		<key>Headers/ConfigResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IkBymmrZ/dao1uCvH7Vm2UzTtLU=
+			</data>
+			<key>hash2</key>
+			<data>
+			NEvVzcfSZU/RGNZYO5opdZz9EbnRR1dYL+zqF3S9y6M=
+			</data>
+		</dict>
 		<key>Headers/DefaultBLEDataParseProtocol.h</key>
 		<dict>
 			<key>hash</key>
@@ -202,6 +236,17 @@
 			<key>hash2</key>
 			<data>
 			9gwwawa9qgyq70EBUseEDjq8Mqrc85zau0R3vNmLF2I=
+			</data>
+		</dict>
+		<key>Headers/ECUParameter.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			034Pq2bzfbaq+P2ojkbgK8O3k5c=
+			</data>
+			<key>hash2</key>
+			<data>
+			UcIoSw9IAlBz6dUESXzR3Mh7CUPtZcieqpqgQN23X0Y=
 			</data>
 		</dict>
 		<key>Headers/ExecutorDelivery.h</key>
@@ -241,11 +286,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hWc9Ny0YbxBnuPL6dANUC0lV2sA=
+			htC3pYqqAdpbJlIKJb7XSIGj4To=
 			</data>
 			<key>hash2</key>
 			<data>
-			L6Pe+nBdy4hhjG/ztiJEmooY6eTLD7vEj/o0/kfODVI=
+			3Xq7/7/mc7qqAzARVz3NyFrdaHeGICFUuyxEdrL0Yfg=
 			</data>
 		</dict>
 		<key>Headers/RKBLEDispatcher.h</key>
@@ -285,11 +330,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yowv1adMlziZKVnX1d16ETb3l2c=
+			1nvh0Jxpmya15O4VhHlM+7FWnno=
 			</data>
 			<key>hash2</key>
 			<data>
-			HktAF3HN9N1Le910yeJXAzIGRO2Rku8EpT2R2WYzUAE=
+			y5O3DJxUNwjs0ME2s749ztVRmqqfl1fsLujUTVcouEo=
 			</data>
 		</dict>
 		<key>Headers/RKFrame.h</key>
