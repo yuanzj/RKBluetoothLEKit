@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		vlwXOtaAsXxTzSOv32QiCXgKGcg=
-		</data>
 		<key>Headers/BLERequest.h</key>
 		<data>
 		FvnQftKfihioWLcLPLZlVfVaGFQ=
@@ -50,7 +46,7 @@
 		</data>
 		<key>Headers/RK410APIService.h</key>
 		<data>
-		uZowr8k9aZEiS/Ilp6zJXjBgHZ0=
+		hWc9Ny0YbxBnuPL6dANUC0lV2sA=
 		</data>
 		<key>Headers/RKBLEDispatcher.h</key>
 		<data>
@@ -102,7 +98,7 @@
 		</data>
 		<key>Headers/RkFieldConverter.h</key>
 		<data>
-		6G+A1HMrZnFNAQYU8HmPxidQXyM=
+		csHpJCWMpUNI0t0uz/wKKttDcMY=
 		</data>
 		<key>Headers/Runnable.h</key>
 		<data>
@@ -245,11 +241,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uZowr8k9aZEiS/Ilp6zJXjBgHZ0=
+			hWc9Ny0YbxBnuPL6dANUC0lV2sA=
 			</data>
 			<key>hash2</key>
 			<data>
-			TdJvvvMcUD8JjtHooLbGoR3u/3ICjS/uS/VfQAwaQaE=
+			L6Pe+nBdy4hhjG/ztiJEmooY6eTLD7vEj/o0/kfODVI=
 			</data>
 		</dict>
 		<key>Headers/RKBLEDispatcher.h</key>
@@ -388,11 +384,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6G+A1HMrZnFNAQYU8HmPxidQXyM=
+			csHpJCWMpUNI0t0uz/wKKttDcMY=
 			</data>
 			<key>hash2</key>
 			<data>
-			6ZXzjrWlJwEeLVP/QEysvFrlFG+DTB0PokBUiWMHBk8=
+			FVDXt7QEjqFS2UPYOjndyBHaHe2XH7CPmFsWNkgvCl8=
 			</data>
 		</dict>
 		<key>Headers/Runnable.h</key>
