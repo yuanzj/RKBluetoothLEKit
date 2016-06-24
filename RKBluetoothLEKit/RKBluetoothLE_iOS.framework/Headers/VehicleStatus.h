@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "RkFieldConverter.h"
 
-typedef NS_ENUM(NSInteger, LOCK_STATUS) {
+typedef NS_ENUM(NSInteger, STATUS) {
 
-    UNKNOW   = 0,
-    LOCKED   = 1,
-    UNLOCKED = 2,
-
+    STATUS_FORTIFICATION = 0,
+    STATUS_DISARMING     = 1,
+    STATUS_P             = 2,
+    STATUS_D             = 3,
+    
 };
 
 @interface VehicleStatus : NSObject<RkFieldConverter>
@@ -29,8 +30,8 @@ typedef NS_ENUM(NSInteger, LOCK_STATUS) {
 @property (assign, nonatomic) float speed;
 //总里程
 @property (assign, nonatomic) float totalODO;
-//锁车状态
-@property (assign, nonatomic) int   lockStatus;
+//锁车状态 车状态：00：设防，1：撤防不上电，2：驻车，3 ：行车
+@property (assign, nonatomic) int   status;
 //左转向指示
 @property (assign, nonatomic) BOOL  leftSignal;
 //右转向指示

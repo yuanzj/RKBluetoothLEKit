@@ -9,6 +9,8 @@
 #import "RKTableViewController.h"
 #import "RKAppDelegate.h"
 #import "CocoaSecurity.h"
+#import <RKBluetoothLE_iOS/CustomParameter.h>
+
 
 @interface RKTableViewController (){
 
@@ -29,11 +31,11 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    dataSrc = @[@"设防",@"撤防",@"寻车"];
+    dataSrc = @[@"上电",@"断电",@"寻车",@"车辆状态",@"故障检测",@"个性化配置",@"来电、短信仪表显示"];
     
-    [RK410APIServiceImpl setPostAuthCodeBlock:^(NSString *peripheralName){
+    [RK4102APIServiceImpl setPostAuthCodeBlock:^(NSString *peripheralName){
         CocoaSecurityDecoder *mCocoaSecurityDecoder = [[CocoaSecurityDecoder alloc] init];
-        return [mCocoaSecurityDecoder base64:@"woN+V0EdVNByALI1XQbxnQ=="];
+        return [mCocoaSecurityDecoder base64:@"Q1NsmKbbaf+mfktSpyNJ5w=="];
     }];
 
 }
@@ -102,23 +104,36 @@
     
     switch (indexPath.row) {
         case 0:
-            [self lock];
+            [self powerOn];
             break;
         case 1:
-            
+            [self powerOff];
             break;
         case 2:
-            
+            [self find];
             break;
+        case 3:
+            [self getVehicleStatus];
+            break;
+        case 4:
+            [self getFault];
+            break;
+        case 5:
+            [self setCustomParamter];
+            break;
+        case 6:
+            [self setInstrument];
+            break;
+            
             
         default:
             break;
     }
 }
 
--(void)lock{
+-(void)powerOff{
     
-    [[RK410APIServiceImpl lock:@"B00G20B6T3"] subscribeNext:^(RemoteControlResult *response){
+    [[YadeaApiServiceImpl powerOff:@"B00G10B6F3"] subscribeNext:^(RemoteControlResult *response){
     
     } error:^(NSError *error){
         
@@ -126,6 +141,83 @@
     
 }
 
+-(void)powerOn{
+    
+    [[YadeaApiServiceImpl powerOn:@"B00G10B6F3"] subscribeNext:^(RemoteControlResult *response){
+        
+    } error:^(NSError *error){
+        
+    }];
+    
+}
+
+
+-(void)find{
+    
+    [[YadeaApiServiceImpl find:@"B00G10B6F3"] subscribeNext:^(RemoteControlResult *response){
+        
+    } error:^(NSError *error){
+        
+    }];
+    
+}
+
+-(void)getVehicleStatus{
+    
+    [[YadeaApiServiceImpl getVehicleStatus:@"B00G10B6F3"] subscribeNext:^(VehicleStatus *response){
+        
+    } error:^(NSError *error){
+        
+    }];
+    
+}
+
+-(void)getFault{
+    
+    [[YadeaApiServiceImpl getFault:@"B00G10B6F3"] subscribeNext:^(YadeaFault *response){
+        
+    } error:^(NSError *error){
+        
+    }];
+    
+}
+
+-(void)setCustomParamter{
+    CustomParameter *mECUParameter       = [[CustomParameter alloc] init];
+    mECUParameter.alarmType              = 0;
+    mECUParameter.autoSafety             = 2;
+    mECUParameter.autoHold               = 2;
+    mECUParameter.hornVolume             = 1;
+    mECUParameter.colorfulLight          = 0xffffff;
+    mECUParameter.autoCloseLight         = 0;
+    
+    mECUParameter.onTimeOpenLightStartHH = 8;
+    mECUParameter.onTimeOpenLightStartMM = 0;
+    mECUParameter.onTimeOpenLightEndHH   = 10;
+    mECUParameter.onTimeOpenLightEndMM   = 0;
+
+    
+    [[YadeaApiServiceImpl setCustomParameter:@"B00G10B6F3" parameter :mECUParameter] subscribeNext:^(ConfigResult *response){
+        
+    } error:^(NSError *error){
+        
+    }];
+    
+}
+
+-(void)setInstrument{
+    
+    Instrument *mInstrument = [[Instrument alloc] init];
+    mInstrument.telephone   = 1;
+    mInstrument.SMS         = 1;
+    
+    [[YadeaApiServiceImpl setInstrument:@"B00G10B6F3" parameter :mInstrument] subscribeNext:^(ConfigResult *response){
+        
+    } error:^(NSError *error){
+        
+    }];
+    
+}
 
 /*
 #pragma mark - Navigation

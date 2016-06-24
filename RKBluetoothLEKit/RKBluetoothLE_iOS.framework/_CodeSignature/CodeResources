@@ -18,7 +18,15 @@
 		</data>
 		<key>Headers/BaseParameter.h</key>
 		<data>
-		dFMo/pKrPjdvTucRS4+CHmuj7p0=
+		HIW3xd814Rq/n1Plt/Ko4qvDN1Q=
+		</data>
+		<key>Headers/BaseUpgradeResponse.h</key>
+		<data>
+		5DGCLka5rK8Zl1mEa02ndPfVQYU=
+		</data>
+		<key>Headers/BleLog.h</key>
+		<data>
+		LIzDVj1tXALTTA1JN4BfIOvrvOs=
 		</data>
 		<key>Headers/Bluetooth.h</key>
 		<data>
@@ -31,6 +39,10 @@
 		<key>Headers/ConfigResult.h</key>
 		<data>
 		IkBymmrZ/dao1uCvH7Vm2UzTtLU=
+		</data>
+		<key>Headers/CustomParameter.h</key>
+		<data>
+		sc1yvXGF0iN4MD2XPBEQM2EGAnY=
 		</data>
 		<key>Headers/DefaultBLEDataParseProtocol.h</key>
 		<data>
@@ -52,13 +64,25 @@
 		<data>
 		Pgil2lkg19b8Uke3AKwdP772yAI=
 		</data>
+		<key>Headers/Fault_Rk4102.h</key>
+		<data>
+		1b41OREIkSWeX1m1sHF2PZ7t0Pc=
+		</data>
+		<key>Headers/FinishPackageResponse.h</key>
+		<data>
+		7+duhZoejCU7D+eQiQGjyZ9xtdo=
+		</data>
 		<key>Headers/Firmware.h</key>
 		<data>
-		E3Fl3xSogamQALKB91bD2210658=
+		P1XGEd2Ho38hURT8AT6MXsh+Q2E=
 		</data>
-		<key>Headers/RK410APIService.h</key>
+		<key>Headers/Instrument.h</key>
 		<data>
-		htC3pYqqAdpbJlIKJb7XSIGj4To=
+		VsI5EhkAgsKhSihuJhdINjW35Fg=
+		</data>
+		<key>Headers/MD5CheckResponse.h</key>
+		<data>
+		WvOeRm+NJJk3pejKkfsGBfqmzf8=
 		</data>
 		<key>Headers/RKBLEDispatcher.h</key>
 		<data>
@@ -74,23 +98,35 @@
 		</data>
 		<key>Headers/RKBluetoothLE-iOS-umbrella.h</key>
 		<data>
-		1nvh0Jxpmya15O4VhHlM+7FWnno=
+		nG4P2sbM7KIUWKJ/JMudrM8Qp90=
 		</data>
 		<key>Headers/RKFrame.h</key>
 		<data>
-		z+EV8Bd8YpuEZd/O5sHdYdx8XxE=
+		zoNWiJOaxvr1IfY++/krXA0gNec=
 		</data>
 		<key>Headers/RKPackage.h</key>
 		<data>
 		ItgZznOAQIrPyfWt9o9dl0+buUU=
 		</data>
+		<key>Headers/Reboot.h</key>
+		<data>
+		6PhQXnTcJp6qkyb6dBHXjSeuIBk=
+		</data>
 		<key>Headers/RemoteControlResult.h</key>
 		<data>
 		cBRVP+UnAwrglsFFaq0Rwh5qg8g=
 		</data>
+		<key>Headers/RequestPackageResponse.h</key>
+		<data>
+		1esVfV7L/+ch62ndcuTT0Re/Guo=
+		</data>
 		<key>Headers/RequestQueue.h</key>
 		<data>
 		6l2vFXefx26tu/NtdvZsKgU4VJg=
+		</data>
+		<key>Headers/RequestUpgradeResponse.h</key>
+		<data>
+		D6BV08zm54lYlCjQid0S5wC69JE=
 		</data>
 		<key>Headers/Response.h</key>
 		<data>
@@ -104,9 +140,13 @@
 		<data>
 		AqxIxFcHEbn7XaVQScI/8Iy2ZDE=
 		</data>
+		<key>Headers/Rk4102ApiService.h</key>
+		<data>
+		cj/tC0fsprQ+rA2gAvcvh2m2cTQ=
+		</data>
 		<key>Headers/RkBluetoothClient.h</key>
 		<data>
-		lM5dpWor/etAKIcX3+XVRTZpuRc=
+		VvOXSGR37gQanhKfQQJZkLXu1y0=
 		</data>
 		<key>Headers/RkFieldConverter.h</key>
 		<data>
@@ -118,11 +158,23 @@
 		</data>
 		<key>Headers/UpgradeManager.h</key>
 		<data>
-		DyeH0TOt2a3SNY11PvkBtVZxa5k=
+		XBSplHp3ev5sP8vcHw98QIQym2I=
+		</data>
+		<key>Headers/UpgradeProgress.h</key>
+		<data>
+		SU+RzoNrim3obqpi40Jfmei7o0w=
 		</data>
 		<key>Headers/VehicleStatus.h</key>
 		<data>
-		4BD8O2tb9p0YA46HHeLMofcwh3I=
+		UTfBoGYX/tGOttuB/qfwOO4uHtc=
+		</data>
+		<key>Headers/YadeaApiService.h</key>
+		<data>
+		3aDE6AvqIUbdS92GnhF67jlb/9A=
+		</data>
+		<key>Headers/YadeaFault.h</key>
+		<data>
+		ZnqLkclN2afWbnx8A5Xs4yAcViY=
 		</data>
 		<key>Headers/crc8_16.h</key>
 		<data>
@@ -130,7 +182,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OLN8BLj0k66hEwwzJ6Gh+3HIqtU=
+		RLWd/8vwGgv0yHGFLVmY/2V/AhM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -176,11 +228,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dFMo/pKrPjdvTucRS4+CHmuj7p0=
+			HIW3xd814Rq/n1Plt/Ko4qvDN1Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			KXDj37sxGu72Q3+dUlQoTmNQzovL5gs4BrGSL85B6+k=
+			DyLiethKXlLom9R4GULkEzLkGlkP0ZLpAkA0mgOZ4bA=
+			</data>
+		</dict>
+		<key>Headers/BaseUpgradeResponse.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5DGCLka5rK8Zl1mEa02ndPfVQYU=
+			</data>
+			<key>hash2</key>
+			<data>
+			GzJVnV/wYiA/fF6JCCLb0wPsRXvAeNsL9bDEce4jmRQ=
+			</data>
+		</dict>
+		<key>Headers/BleLog.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LIzDVj1tXALTTA1JN4BfIOvrvOs=
+			</data>
+			<key>hash2</key>
+			<data>
+			sul8I1yWBGJqbbWUj1U77ETzTKN/iOdMZcsRseMraVU=
 			</data>
 		</dict>
 		<key>Headers/Bluetooth.h</key>
@@ -214,6 +288,17 @@
 			<key>hash2</key>
 			<data>
 			NEvVzcfSZU/RGNZYO5opdZz9EbnRR1dYL+zqF3S9y6M=
+			</data>
+		</dict>
+		<key>Headers/CustomParameter.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sc1yvXGF0iN4MD2XPBEQM2EGAnY=
+			</data>
+			<key>hash2</key>
+			<data>
+			zMQ4zwQz7te50QqEMLI8I5gxPPzU7ijAXE9aM+kCbZ0=
 			</data>
 		</dict>
 		<key>Headers/DefaultBLEDataParseProtocol.h</key>
@@ -271,26 +356,59 @@
 			DRJCaArYt5zjdk85v0HMx7q/5WIH5E3MdFt7RbKMA6E=
 			</data>
 		</dict>
+		<key>Headers/Fault_Rk4102.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1b41OREIkSWeX1m1sHF2PZ7t0Pc=
+			</data>
+			<key>hash2</key>
+			<data>
+			vo8itwhAgkmr4c/wyH0OPmr1BIBm26mRoCNDxPgOdR0=
+			</data>
+		</dict>
+		<key>Headers/FinishPackageResponse.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7+duhZoejCU7D+eQiQGjyZ9xtdo=
+			</data>
+			<key>hash2</key>
+			<data>
+			hbzUODEZJPHZts0+IGhO23yELq+9gsrl8KD2ey/LLkI=
+			</data>
+		</dict>
 		<key>Headers/Firmware.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			E3Fl3xSogamQALKB91bD2210658=
+			P1XGEd2Ho38hURT8AT6MXsh+Q2E=
 			</data>
 			<key>hash2</key>
 			<data>
-			j6LBZsOujD1KcLh8QujxjZtXJobB3qxkGQW0BjUygZk=
+			zx03LycsRHzEgB2YEkyvesV6c0/DgRpnbHKLpRQKAmc=
 			</data>
 		</dict>
-		<key>Headers/RK410APIService.h</key>
+		<key>Headers/Instrument.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			htC3pYqqAdpbJlIKJb7XSIGj4To=
+			VsI5EhkAgsKhSihuJhdINjW35Fg=
 			</data>
 			<key>hash2</key>
 			<data>
-			3Xq7/7/mc7qqAzARVz3NyFrdaHeGICFUuyxEdrL0Yfg=
+			xkewq6AWSOaByS8mMhViCRH1NUVmz+oUjGH+CBJSeGA=
+			</data>
+		</dict>
+		<key>Headers/MD5CheckResponse.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WvOeRm+NJJk3pejKkfsGBfqmzf8=
+			</data>
+			<key>hash2</key>
+			<data>
+			4N7FZ6ybLHh15POmCEgrQUAJ4kkBOjv8/qLEMXhBYYQ=
 			</data>
 		</dict>
 		<key>Headers/RKBLEDispatcher.h</key>
@@ -330,22 +448,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1nvh0Jxpmya15O4VhHlM+7FWnno=
+			nG4P2sbM7KIUWKJ/JMudrM8Qp90=
 			</data>
 			<key>hash2</key>
 			<data>
-			y5O3DJxUNwjs0ME2s749ztVRmqqfl1fsLujUTVcouEo=
+			U4jUeHEy7rp3fTHfculV0QXbK3yOpmWdvKZ4kshGyNM=
 			</data>
 		</dict>
 		<key>Headers/RKFrame.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			z+EV8Bd8YpuEZd/O5sHdYdx8XxE=
+			zoNWiJOaxvr1IfY++/krXA0gNec=
 			</data>
 			<key>hash2</key>
 			<data>
-			B5Ck6XvW7IQjJ+VH74vseZHWXgxoPozJpjTjPbvM0wI=
+			rBCSJQYnoZMvUgFDGUILyJO5O4XnwxvJ8yFHlmlAmrI=
 			</data>
 		</dict>
 		<key>Headers/RKPackage.h</key>
@@ -359,6 +477,17 @@
 			M0K/muNil1T5L3MgoeiqV17n0pKB5wFS3bOGSLh3esg=
 			</data>
 		</dict>
+		<key>Headers/Reboot.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6PhQXnTcJp6qkyb6dBHXjSeuIBk=
+			</data>
+			<key>hash2</key>
+			<data>
+			RP2fUnZlde8ubSHhU9MKJg7Azr+DeWd+PvKuduAgQ9o=
+			</data>
+		</dict>
 		<key>Headers/RemoteControlResult.h</key>
 		<dict>
 			<key>hash</key>
@@ -370,6 +499,17 @@
 			qL4nkP5T9RiuBW8pPbOwgvrinWN+jPkYN3Jm0v5VqDs=
 			</data>
 		</dict>
+		<key>Headers/RequestPackageResponse.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1esVfV7L/+ch62ndcuTT0Re/Guo=
+			</data>
+			<key>hash2</key>
+			<data>
+			kHD3cjlOhi10l1dZ3iK0C7+ecbKSJ44CsqmI4iQPYow=
+			</data>
+		</dict>
 		<key>Headers/RequestQueue.h</key>
 		<dict>
 			<key>hash</key>
@@ -379,6 +519,17 @@
 			<key>hash2</key>
 			<data>
 			hsIVe0TjqIcGqmqDjHo+Sgz657tyXpPW5EyTYQnn/V8=
+			</data>
+		</dict>
+		<key>Headers/RequestUpgradeResponse.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			D6BV08zm54lYlCjQid0S5wC69JE=
+			</data>
+			<key>hash2</key>
+			<data>
+			KJFd4DfAJTeLQ2U/CLcUnmyGhEc7Q8WP4maGvE/fMXI=
 			</data>
 		</dict>
 		<key>Headers/Response.h</key>
@@ -414,15 +565,26 @@
 			jND+gYKsNg9D4Z1aEUwviq7GfgIPnUeagd+qKHyButY=
 			</data>
 		</dict>
+		<key>Headers/Rk4102ApiService.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cj/tC0fsprQ+rA2gAvcvh2m2cTQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			Q1cnxBj+ssi43QFh0XD2ugC+kFm4LC52xCJ2aU9lej8=
+			</data>
+		</dict>
 		<key>Headers/RkBluetoothClient.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lM5dpWor/etAKIcX3+XVRTZpuRc=
+			VvOXSGR37gQanhKfQQJZkLXu1y0=
 			</data>
 			<key>hash2</key>
 			<data>
-			fojGApwN99k6s+laPbNSvhQ5tS+mDsTtqHedwGLIYVs=
+			D4m2fPIs5D8nStxiSD8e41XTBXg2SSqw0E/kiKlTZn0=
 			</data>
 		</dict>
 		<key>Headers/RkFieldConverter.h</key>
@@ -451,22 +613,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DyeH0TOt2a3SNY11PvkBtVZxa5k=
+			XBSplHp3ev5sP8vcHw98QIQym2I=
 			</data>
 			<key>hash2</key>
 			<data>
-			kRq1sjrjYbXlH+21+Y17BumYEe9Wr3tYbGUNrvToLw0=
+			qppPj7fybChqkAFZxj5HU66zQLPtz0ZXhjlmQeVtHQ8=
+			</data>
+		</dict>
+		<key>Headers/UpgradeProgress.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SU+RzoNrim3obqpi40Jfmei7o0w=
+			</data>
+			<key>hash2</key>
+			<data>
+			nBvePLZqAMhJuN+ItDbv6YHcXmom5hTLu67Vu/qu6hw=
 			</data>
 		</dict>
 		<key>Headers/VehicleStatus.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4BD8O2tb9p0YA46HHeLMofcwh3I=
+			UTfBoGYX/tGOttuB/qfwOO4uHtc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Wy7k4AFwP/GLVJUPYW04x4WE6Zv6OyAh9224/xxAyZc=
+			Dc43N1ebgEaBP4pUa4y6ntFYDaIacmXQCPMT2YHHbho=
+			</data>
+		</dict>
+		<key>Headers/YadeaApiService.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3aDE6AvqIUbdS92GnhF67jlb/9A=
+			</data>
+			<key>hash2</key>
+			<data>
+			VlQngF8afTkEzeSDbQxemnEalK0LB41L7zYk3vALO1M=
+			</data>
+		</dict>
+		<key>Headers/YadeaFault.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZnqLkclN2afWbnx8A5Xs4yAcViY=
+			</data>
+			<key>hash2</key>
+			<data>
+			hPn0uRyevtOY237+OXzWUHNJffxSjcgOVT4VlbI4SgQ=
 			</data>
 		</dict>
 		<key>Headers/crc8_16.h</key>

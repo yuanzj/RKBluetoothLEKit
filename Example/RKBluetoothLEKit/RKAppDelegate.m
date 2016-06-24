@@ -7,15 +7,44 @@
 //
 
 #import "RKAppDelegate.h"
+#import "CocoaSecurity.h"
 
+@interface RKAppDelegate (){
+    
+    RACDisposable *authResultSignalDisposable;
+    
+}
+
+@end
 @implementation RKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     self.mRkBluetoothClient = [RkBluetoothClient shareClient];
-    self.mRK410APIService = [self.mRkBluetoothClient createRk410ApiService];
     
+    self.mRk4102ApiService = [self.mRkBluetoothClient createRk4102ApiService];
+    [self.mRk4102ApiService setPostAuthCodeBlock:^(NSString *peripheralName){
+        CocoaSecurityDecoder *mCocoaSecurityDecoder = [[CocoaSecurityDecoder alloc] init];
+        return [mCocoaSecurityDecoder base64:@"Q1NsmKbbaf+mfktSpyNJ5w=="];
+    }];
+    
+    authResultSignalDisposable = [[[self.mRk4102ApiService authResultSignal] deliverOn:[RACScheduler mainThreadScheduler]]
+                                  subscribeNext:^(NSNotification *response) {
+                                      //鉴权成功
+                                      if(response.userInfo[RKBLEAuthResultStatus]){
+                                          NSLog(@"鉴权成功");
+                                          //更新本地标志位，标示下一次鉴权使用FF鉴权
+                                          
+                                      } else {
+                                          //鉴权失败
+                                          NSLog(@"鉴权失败");
+                                          //更新本地标志位，标示下一次鉴权使用鉴权码鉴权
+                                          
+                                      }
+                                  }];
+    
+    self.mYadeaApiService = [[YadeaApiService alloc] initWithRk4102ApiService:self.mRk4102ApiService];
     
     return YES;
 }

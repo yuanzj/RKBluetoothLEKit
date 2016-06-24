@@ -28,6 +28,8 @@
 #define  RK410_SPEED_CONFIG   0x13
 #define  RK410_TURBO          0x14
 #define  RK410_ENABLE_SERVICE 0x15
+#define  RK410_CUSTOM_CONFIG  0x17
+#define  RK410_INSTRUMENT     0x18
 #define  RK410_VERSION        0xF1
 
 @interface BaseParameter : NSObject<RkFieldConverter>

@@ -10,9 +10,11 @@
 
 @interface Firmware : NSObject
 
+@property (nonatomic,copy  ) NSString *ueSn;
+
 @property (nonatomic,copy  ) NSString *version;
 
-@property (nonatomic,assign) int      fileSize;
+@property (nonatomic,assign) long     fileSize;
 
 @property (nonatomic,assign) Byte     singlePackageSize;
 

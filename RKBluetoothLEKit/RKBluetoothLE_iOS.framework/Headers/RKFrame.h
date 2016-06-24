@@ -11,6 +11,7 @@
 @interface RKFrame : NSObject
 
 @property(nonatomic,copy)NSData *data;
+
 @property(nonatomic,assign)int frameSize;
 
 @end

@@ -8,12 +8,26 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "RK410APIService.h"
-#import "Firmware.h"
-
+#import "Rk4102ApiService.h"
+#import "UpgradeProgress.h"
 
 @interface UpgradeManager : NSObject
 
--(RACSignal*)upgradeTarget:(NSString*)target  withAPIService:(RK410APIService*) mRK410APIService andFirmware:(Firmware*)mFirmware;
+-(instancetype)initWithAPIService:(Rk4102ApiService*) mRK410APIService;
+
+/**
+ *  升级
+ *
+ *  @param mFirmware
+ *
+ *  @return 
+ */
+-(RACSignal*)upgradeFirmware:(Firmware*)mFirmware;
+
+
+/**
+ *  取消升级
+ */
+-(void)cancelUpgrade;
 
 @end

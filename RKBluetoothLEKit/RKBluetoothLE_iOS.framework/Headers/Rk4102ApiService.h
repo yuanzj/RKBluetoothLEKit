@@ -9,24 +9,43 @@
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "RequestQueue.h"
-
+#import "BLEStack.h"
 #import "RemoteControlResult.h"
 #import "Firmware.h"
 #import "RKPackage.h"
 #import "RKFrame.h"
 #import "VehicleStatus.h"
-#import "Fault.h"
+#import "Fault_Rk4102.h"
 #import "ECUParameter.h"
 #import "ConfigResult.h"
+#import "RequestUpgradeResponse.h"
+#import "RequestPackageResponse.h"
+#import "FinishPackageResponse.h"
+#import "MD5CheckResponse.h"
+#import "CustomParameter.h"
+#import "Instrument.h"
+
+extern NSString * const RKBLEAuthResultStatus;
+extern NSString * const RKBLEAuthResultError;
 
 //鉴权码生成器
 typedef id (^PostAuthCode)(NSString *peripheralName);
 
-@interface RK410APIService : NSObject
+@interface Rk4102ApiService : NSObject
 
 @property(nonatomic,copy)PostAuthCode postAuthCodeBlock;
 
 -(id)initWithRequestQueue:(RequestQueue *)mRequestQueue;
+
+#pragma mark -
+#pragma mark 遥控器控制类指令
+/**
+ *  鉴权结果信号
+ *  RKBLEAuthResultStatus ：yes: 成功 no:失败
+ *  RKBLEAuthResultError ：鉴权失败的错误对象
+ *  @return NSNotification
+ */
+-(RACSignal*) authResultSignal;
 
 /**
  *  锁车
@@ -66,6 +85,27 @@ typedef id (^PostAuthCode)(NSString *peripheralName);
 -(RACSignal*)openBox:(NSString*)target;
 
 /**
+ *  上电
+ *
+ *  @param target
+ *
+ *  @return
+ */
+-(RACSignal*)powerOn:(NSString*)target;
+
+/**
+ *  断电
+ *
+ *  @param target
+ *
+ *  @return
+ */
+-(RACSignal*)powerOff:(NSString*)target;
+
+#pragma mark -
+#pragma mark 车况、故障查询
+
+/**
  *  获取车况
  *
  *  @param target
@@ -103,15 +143,43 @@ typedef id (^PostAuthCode)(NSString *peripheralName);
  */
 -(RACSignal*)getECUParameter:(NSString*)target;
 
+#pragma mark -
+#pragma mark 参数配置
+
 /**
- *  启动升级
+ *  设置个性化参数
  *
  *  @param target
- *  @param _Firmware 固件信息
+ *  @param CustomParameter
  *
- *  @return
+ *  @return ConfigResult
  */
--(RACSignal*)activateUpgrade:(NSString*)target withFirmware:(Firmware*)_Firmware;
+-(RACSignal*)setCustomParameter:(NSString*)target parameter:(CustomParameter*)_ECUParameter;
+
+/**
+ *  获取个性化参数
+ *
+ *  @param target
+ *
+ *  @return ECUParameter
+ */
+-(RACSignal*)getCustomParameter:(NSString*)target;
+
+#pragma mark -
+#pragma mark 仪表显示
+
+/**
+ *  来电、短信表显示设置
+ *
+ *  @param target
+ *  @param Instrument
+ *
+ *  @return ConfigResult
+ */
+-(RACSignal*)setInstrument:(NSString*)target parameter:(Instrument*)_Instrument;
+
+#pragma mark -
+#pragma mark 固件升级
 
 /**
  *  请求升级
@@ -119,7 +187,7 @@ typedef id (^PostAuthCode)(NSString *peripheralName);
  *  @param target
  *  @param _Firmware 固件信息
  *
- *  @return
+ *  @return RequestUpgradeResponse
  */
 -(RACSignal*)requestUpgrade:(NSString*)target withFirmware:(Firmware*)_Firmware;
 
@@ -130,7 +198,7 @@ typedef id (^PostAuthCode)(NSString *peripheralName);
  *  @param target
  *  @param _RKPackage
  *
- *  @return
+ *  @return RequestPackageResponse
  */
 -(RACSignal*)requestStartPackage:(NSString*)target withPackage:(RKPackage*)_RKPackage;
 
@@ -163,5 +231,14 @@ typedef id (^PostAuthCode)(NSString *peripheralName);
  *  @return
  */
 -(RACSignal*)sendData:(NSString*)target withFrame:(RKFrame*)_RKFrame;
+
+/**
+ *  重启中控
+ *
+ *  @param target
+ *
+ *  @return
+ */
+-(RACSignal*)reboot:(NSString*)target;
 
 @end

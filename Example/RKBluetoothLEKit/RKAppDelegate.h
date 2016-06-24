@@ -9,9 +9,11 @@
 @import UIKit;
 
 #import <RKBluetoothLE_iOS/RkBluetoothClient.h>
-#import <RKBluetoothLE_iOS/RK410APIService.h>
+#import <RKBluetoothLE_iOS/YadeaApiService.h>
 
-#define RK410APIServiceImpl ((RKAppDelegate*)[[UIApplication sharedApplication] delegate]).mRK410APIService
+#define RK4102APIServiceImpl ((RKAppDelegate*)[[UIApplication sharedApplication] delegate]).mRk4102ApiService
+
+#define YadeaApiServiceImpl ((RKAppDelegate*)[[UIApplication sharedApplication]  delegate]).mYadeaApiService
 
 @interface RKAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -19,6 +21,8 @@
 
 @property (strong, nonatomic) RkBluetoothClient *mRkBluetoothClient;
 
-@property (strong, nonatomic) RK410APIService   *mRK410APIService;
+@property (strong, nonatomic) Rk4102ApiService  *mRk4102ApiService;
+
+@property (strong, nonatomic) YadeaApiService   *mYadeaApiService;
 
 @end
