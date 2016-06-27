@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/CustomParameter.h</key>
 		<data>
-		sc1yvXGF0iN4MD2XPBEQM2EGAnY=
+		bQur7IMNQyzjY5WaHskDaLCklcA=
 		</data>
 		<key>Headers/DefaultBLEDataParseProtocol.h</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Headers/RKBluetoothLE-iOS-umbrella.h</key>
 		<data>
-		nG4P2sbM7KIUWKJ/JMudrM8Qp90=
+		xhFXciR91bE+sx0H2tryF5oR6ZQ=
 		</data>
 		<key>Headers/RKFrame.h</key>
 		<data>
@@ -170,11 +170,15 @@
 		</data>
 		<key>Headers/YadeaApiService.h</key>
 		<data>
-		3aDE6AvqIUbdS92GnhF67jlb/9A=
+		ad3kBUwPzOdvrOvWZo+KaakYs9A=
 		</data>
 		<key>Headers/YadeaFault.h</key>
 		<data>
 		ZnqLkclN2afWbnx8A5Xs4yAcViY=
+		</data>
+		<key>Headers/YadeaParamter.h</key>
+		<data>
+		iIBaAMjCzHXXNPuRXuscxIbDYtE=
 		</data>
 		<key>Headers/crc8_16.h</key>
 		<data>
@@ -294,11 +298,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sc1yvXGF0iN4MD2XPBEQM2EGAnY=
+			bQur7IMNQyzjY5WaHskDaLCklcA=
 			</data>
 			<key>hash2</key>
 			<data>
-			zMQ4zwQz7te50QqEMLI8I5gxPPzU7ijAXE9aM+kCbZ0=
+			W5jVYkSIDqiSr3dwi0lR0iX0Q+83s9f7ETb54Ii1MAg=
 			</data>
 		</dict>
 		<key>Headers/DefaultBLEDataParseProtocol.h</key>
@@ -448,11 +452,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nG4P2sbM7KIUWKJ/JMudrM8Qp90=
+			xhFXciR91bE+sx0H2tryF5oR6ZQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			U4jUeHEy7rp3fTHfculV0QXbK3yOpmWdvKZ4kshGyNM=
+			rg55dPzIZH6HY3eBfhV+LV2Kuz621AfxLPbThvEqXe8=
 			</data>
 		</dict>
 		<key>Headers/RKFrame.h</key>
@@ -646,11 +650,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3aDE6AvqIUbdS92GnhF67jlb/9A=
+			ad3kBUwPzOdvrOvWZo+KaakYs9A=
 			</data>
 			<key>hash2</key>
 			<data>
-			VlQngF8afTkEzeSDbQxemnEalK0LB41L7zYk3vALO1M=
+			UFmxyxGpZo1eHS+yGPz44z/9B1Dxo6vT6Rearit1v/c=
 			</data>
 		</dict>
 		<key>Headers/YadeaFault.h</key>
@@ -662,6 +666,17 @@
 			<key>hash2</key>
 			<data>
 			hPn0uRyevtOY237+OXzWUHNJffxSjcgOVT4VlbI4SgQ=
+			</data>
+		</dict>
+		<key>Headers/YadeaParamter.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iIBaAMjCzHXXNPuRXuscxIbDYtE=
+			</data>
+			<key>hash2</key>
+			<data>
+			jd5aXLXylYUIRmVf8wYoQpn78iLVk5DSHgtuY//RDz0=
 			</data>
 		</dict>
 		<key>Headers/crc8_16.h</key>

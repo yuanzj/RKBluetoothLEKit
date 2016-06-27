@@ -9,7 +9,7 @@
 #import "RKTableViewController.h"
 #import "RKAppDelegate.h"
 #import "CocoaSecurity.h"
-#import <RKBluetoothLE_iOS/CustomParameter.h>
+#import <RKBluetoothLE_iOS/YadeaParamter.h>
 
 
 @interface RKTableViewController (){
@@ -183,21 +183,13 @@
 }
 
 -(void)setCustomParamter{
-    CustomParameter *mECUParameter       = [[CustomParameter alloc] init];
-    mECUParameter.alarmType              = 0;
-    mECUParameter.autoSafety             = 2;
-    mECUParameter.autoHold               = 2;
-    mECUParameter.hornVolume             = 1;
-    mECUParameter.colorfulLight          = 0xffffff;
-    mECUParameter.autoCloseLight         = 0;
+    YadeaParamter *mYadeaParamter       = [[YadeaParamter alloc] init];
+    mYadeaParamter.colorfulLight = 0xff0000;
+    mYadeaParamter.autoCloseLight = 30;
+    mYadeaParamter.startTime = @"17:00";
+    mYadeaParamter.endTime = @"20:00";
     
-    mECUParameter.onTimeOpenLightStartHH = 8;
-    mECUParameter.onTimeOpenLightStartMM = 0;
-    mECUParameter.onTimeOpenLightEndHH   = 10;
-    mECUParameter.onTimeOpenLightEndMM   = 0;
-
-    
-    [[YadeaApiServiceImpl setCustomParameter:@"B00G10B6F3" parameter :mECUParameter] subscribeNext:^(ConfigResult *response){
+    [[YadeaApiServiceImpl setCustomParameter:@"B00G10B6F3" parameter :mYadeaParamter] subscribeNext:^(ConfigResult *response){
         
     } error:^(NSError *error){
         

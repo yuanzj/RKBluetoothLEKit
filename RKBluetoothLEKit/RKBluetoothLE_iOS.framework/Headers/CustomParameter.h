@@ -68,4 +68,7 @@
 
 @property (assign, nonatomic) Byte onTimeOpenLightEndMM;
 
+
++(CustomParameter*)createDefault;
+
 @end

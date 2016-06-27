@@ -43,6 +43,7 @@
 #import "Runnable.h"
 #import "YadeaApiService.h"
 #import "YadeaFault.h"
+#import "YadeaParamter.h"
 
 FOUNDATION_EXPORT double RKBluetoothLE_iOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char RKBluetoothLE_iOSVersionString[];

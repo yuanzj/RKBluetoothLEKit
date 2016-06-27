@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Rk4102ApiService.h"
 #import "YadeaFault.h"
+#import "YadeaParamter.h"
 
 @interface YadeaApiService : NSObject
 
@@ -35,6 +36,25 @@
  *  @return
  */
 -(RACSignal*)powerOff:(NSString*)target;
+
+/**
+ *  设防
+ *
+ *  @param target
+ *
+ *  @return RemoteControlResult
+ */
+-(RACSignal*)lock:(NSString*)target;
+
+
+/**
+ *  撤防
+ *
+ *  @param target
+ *
+ *  @return RemoteControlResult
+ */
+-(RACSignal*)unlock:(NSString*)target;
 
 /**
  *  寻车
@@ -77,7 +97,7 @@
  *
  *  @return ConfigResult
  */
--(RACSignal*)setCustomParameter:(NSString*)target parameter:(CustomParameter*)_ECUParameter;
+-(RACSignal*)setCustomParameter:(NSString*)target parameter:(YadeaParamter*)_YadeaParamter;
 
 /**
  *  获取个性化参数
