@@ -26,7 +26,7 @@
     self.mRk4102ApiService = [self.mRkBluetoothClient createRk4102ApiService];
     [self.mRk4102ApiService setPostAuthCodeBlock:^(NSString *peripheralName){
         CocoaSecurityDecoder *mCocoaSecurityDecoder = [[CocoaSecurityDecoder alloc] init];
-        return [mCocoaSecurityDecoder base64:@"Q1NsmKbbaf+mfktSpyNJ5w=="];
+        return [mCocoaSecurityDecoder base64:@"M8Cjz3SFrA2XBefwzj/1Ug=="];
     }];
     
     authResultSignalDisposable = [[[self.mRk4102ApiService authResultSignal] deliverOn:[RACScheduler mainThreadScheduler]]

@@ -35,7 +35,7 @@
     
     [RK4102APIServiceImpl setPostAuthCodeBlock:^(NSString *peripheralName){
         CocoaSecurityDecoder *mCocoaSecurityDecoder = [[CocoaSecurityDecoder alloc] init];
-        return [mCocoaSecurityDecoder base64:@"Q1NsmKbbaf+mfktSpyNJ5w=="];
+        return [mCocoaSecurityDecoder base64:@"M8Cjz3SFrA2XBefwzj/1Ug=="];
     }];
 
 }
@@ -133,7 +133,7 @@
 
 -(void)powerOff{
     
-    [[YadeaApiServiceImpl powerOff:@"B00G10B6F3"] subscribeNext:^(RemoteControlResult *response){
+    [[YadeaApiServiceImpl powerOff:@"B00GDV5DZ3"] subscribeNext:^(RemoteControlResult *response){
     
     } error:^(NSError *error){
         
@@ -143,7 +143,7 @@
 
 -(void)powerOn{
     
-    [[YadeaApiServiceImpl powerOn:@"B00G10B6F3"] subscribeNext:^(RemoteControlResult *response){
+    [[YadeaApiServiceImpl powerOn:@"B00GDV5DZ3"] subscribeNext:^(RemoteControlResult *response){
         
     } error:^(NSError *error){
         
@@ -154,7 +154,7 @@
 
 -(void)find{
     
-    [[YadeaApiServiceImpl find:@"B00G10B6F3"] subscribeNext:^(RemoteControlResult *response){
+    [[YadeaApiServiceImpl find:@"B00GDV5DZ3"] subscribeNext:^(RemoteControlResult *response){
         
     } error:^(NSError *error){
         
@@ -164,7 +164,7 @@
 
 -(void)getVehicleStatus{
     
-    [[YadeaApiServiceImpl getVehicleStatus:@"B00G10B6F3"] subscribeNext:^(VehicleStatus *response){
+    [[YadeaApiServiceImpl getVehicleStatus:@"B00GDV5DZ3"] subscribeNext:^(VehicleStatus *response){
         
     } error:^(NSError *error){
         
@@ -174,7 +174,7 @@
 
 -(void)getFault{
     
-    [[YadeaApiServiceImpl getFault:@"B00G10B6F3"] subscribeNext:^(YadeaFault *response){
+    [[YadeaApiServiceImpl getFault:@"B00GDV5DZ3"] subscribeNext:^(YadeaFault *response){
         
     } error:^(NSError *error){
         
@@ -184,12 +184,12 @@
 
 -(void)setCustomParamter{
     YadeaParamter *mYadeaParamter       = [[YadeaParamter alloc] init];
-    mYadeaParamter.colorfulLight = 0xff0000;
+    mYadeaParamter.colorfulLight = 0x0000ff;
     mYadeaParamter.autoCloseLight = 30;
     mYadeaParamter.startTime = @"17:00";
     mYadeaParamter.endTime = @"20:00";
     
-    [[YadeaApiServiceImpl setCustomParameter:@"B00G10B6F3" parameter :mYadeaParamter] subscribeNext:^(ConfigResult *response){
+    [[YadeaApiServiceImpl setCustomParameter:@"B00GDV5DZ3" parameter :mYadeaParamter] subscribeNext:^(ConfigResult *response){
         
     } error:^(NSError *error){
         
@@ -203,7 +203,7 @@
     mInstrument.telephone   = 1;
     mInstrument.SMS         = 1;
     
-    [[YadeaApiServiceImpl setInstrument:@"B00G10B6F3" parameter :mInstrument] subscribeNext:^(ConfigResult *response){
+    [[YadeaApiServiceImpl setInstrument:@"B00GDV5DZ3" parameter :mInstrument] subscribeNext:^(ConfigResult *response){
         
     } error:^(NSError *error){
         
