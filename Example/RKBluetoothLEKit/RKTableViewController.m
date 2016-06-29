@@ -31,7 +31,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    dataSrc = @[@"上电",@"断电",@"寻车",@"车辆状态",@"故障检测",@"个性化配置",@"来电、短信仪表显示"];
+    dataSrc = @[@"上电",@"断电",@"寻车",@"车辆状态",@"故障检测",@"个性化配置",@"来电、短信仪表显示",@"获取个性化参数"];
     
     [RK4102APIServiceImpl setPostAuthCodeBlock:^(NSString *peripheralName){
         CocoaSecurityDecoder *mCocoaSecurityDecoder = [[CocoaSecurityDecoder alloc] init];
@@ -124,6 +124,9 @@
         case 6:
             [self setInstrument];
             break;
+        case 7:
+            [self getCustomParamter];
+            break;
             
             
         default:
@@ -176,6 +179,16 @@
     
     [[YadeaApiServiceImpl getFault:@"B00GDV5DZ3"] subscribeNext:^(YadeaFault *response){
         
+    } error:^(NSError *error){
+        
+    }];
+    
+}
+
+-(void)getCustomParamter{
+    
+    [[YadeaApiServiceImpl getCustomParameter:@"B00GDV5DZ3" ] subscribeNext:^(YadeaParamter *response){
+        NSLog(@"%@",[response description]);
     } error:^(NSError *error){
         
     }];

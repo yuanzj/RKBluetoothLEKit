@@ -24,6 +24,7 @@
 #import "MD5CheckResponse.h"
 #import "CustomParameter.h"
 #import "Instrument.h"
+#import "YadeaParamter.h"
 
 extern NSString * const RKBLEAuthResultStatus;
 extern NSString * const RKBLEAuthResultError;
@@ -161,7 +162,7 @@ typedef id (^PostAuthCode)(NSString *peripheralName);
  *
  *  @param target
  *
- *  @return ECUParameter
+ *  @return YadeaParamter
  */
 -(RACSignal*)getCustomParameter:(NSString*)target;
 

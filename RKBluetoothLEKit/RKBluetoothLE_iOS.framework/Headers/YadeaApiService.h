@@ -104,7 +104,7 @@
  *
  *  @param target
  *
- *  @return ECUParameter
+ *  @return YadeaParamter
  */
 -(RACSignal*)getCustomParameter:(NSString*)target;
 
