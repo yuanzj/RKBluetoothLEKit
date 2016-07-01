@@ -177,8 +177,8 @@
 
 -(void)getFault{
     
-    [[YadeaApiServiceImpl getFault:@"B00GDV5DZ3"] subscribeNext:^(YadeaFault *response){
-        
+    [[[YadeaApiServiceImpl getFault:@"B00GDV5DZ3"] deliverOn:[RACScheduler mainThreadScheduler]]  subscribeNext:^(YadeaFault *response){
+        [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
     } error:^(NSError *error){
         
     }];
