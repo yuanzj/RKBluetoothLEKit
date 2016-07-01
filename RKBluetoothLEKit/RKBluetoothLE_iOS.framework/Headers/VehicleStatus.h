@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, STATUS) {
 @property (assign, nonatomic) float speed;
 //总里程
 @property (assign, nonatomic) float totalODO;
-//锁车状态 车状态：00：设防，1：撤防不上电，2：驻车，3 ：行车
+//锁车状态 车状态：0：设防，1：撤防不上电，2：驻车，3 ：行车
 @property (assign, nonatomic) int   status;
 //左转向指示
 @property (assign, nonatomic) BOOL  leftSignal;

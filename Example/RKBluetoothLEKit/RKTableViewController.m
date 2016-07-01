@@ -167,8 +167,8 @@
 
 -(void)getVehicleStatus{
     
-    [[YadeaApiServiceImpl getVehicleStatus:@"B00GDV5DZ3"] subscribeNext:^(VehicleStatus *response){
-        
+    [[[YadeaApiServiceImpl getVehicleStatus:@"B00GDV5DZ3"] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(VehicleStatus *response){
+        [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
     } error:^(NSError *error){
         
     }];
