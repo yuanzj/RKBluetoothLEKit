@@ -201,7 +201,7 @@
     mYadeaParamter.autoCloseLight = 30;
     mYadeaParamter.startTime = @"17:00";
     mYadeaParamter.endTime = @"20:00";
-    
+    mYadeaParamter.gears = 1;
     [[YadeaApiServiceImpl setCustomParameter:@"B00GDV5DZ3" parameter :mYadeaParamter] subscribeNext:^(ConfigResult *response){
         
     } error:^(NSError *error){

@@ -17,6 +17,13 @@
 #pragma mark 初始化
 -(id)initWithRk4102ApiService:(Rk4102ApiService *)mRk4102ApiService;
 
+/**
+ *  注入鉴权码回调block
+ *
+ *  @param postAuthCode
+ */
+-(void)setPostAuthCodeBlock:(PostAuthCode)postAuthCode;
+
 #pragma mark -
 #pragma mark 遥控器控制类指令
 /**

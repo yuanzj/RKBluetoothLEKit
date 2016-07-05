@@ -68,6 +68,10 @@
 
 @property (assign, nonatomic) Byte onTimeOpenLightEndMM;
 
+//档位信息
+//两档：0：常规，1：动力档
+@property (assign, nonatomic) Byte gears;
+
 
 +(CustomParameter*)createDefault;
 

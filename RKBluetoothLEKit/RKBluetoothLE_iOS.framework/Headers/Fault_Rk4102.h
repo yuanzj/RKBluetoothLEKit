@@ -65,14 +65,24 @@
 
 #pragma mark -
 #pragma mark 其他故障
-//BIT0：电源管理器故障
-@property (assign, nonatomic) BOOL powerManager;
-//BIT1：DC异常
-@property (assign, nonatomic) BOOL DC;
-//BIT2: 喇叭故障
-@property (assign, nonatomic) BOOL Horn;
 //BIT3：RC异常
 @property (assign, nonatomic) BOOL nonResponseRC;
+
+#pragma mark -
+#pragma mark PCU故障
+//BIT0：短路故障
+@property (assign, nonatomic) BOOL shortCircuit;
+//BIT1：硬件故障
+@property (assign, nonatomic) BOOL hardware;
+//BIT2：DC使能控制
+@property (assign, nonatomic) BOOL DCEnable;
+//BIT3：DC输出过压
+@property (assign, nonatomic) BOOL DCoutput;
+//BIT4：DC输出欠压
+@property (assign, nonatomic) BOOL DCundervoltage;
+//BIT7：电源管理通信故障
+@property (assign, nonatomic) BOOL nonResponsePCU;
+
 
 #pragma mark -
 #pragma mark 灯光断路故障
@@ -99,6 +109,8 @@
 @property (assign, nonatomic) BOOL BC_backlight2;
 //BIT10：背景灯3
 @property (assign, nonatomic) BOOL BC_backlight3;
+//BIT11: 喇叭故障
+@property (assign, nonatomic) BOOL BC_Horn;
 
 #pragma mark -
 #pragma mark 灯光短路故障
@@ -124,5 +136,7 @@
 @property (assign, nonatomic) BOOL SC_backlight2;
 //BIT10：背景灯3
 @property (assign, nonatomic) BOOL SC_backlight3;
+//BIT11: 喇叭故障
+@property (assign, nonatomic) BOOL SC_Horn;
 
 @end

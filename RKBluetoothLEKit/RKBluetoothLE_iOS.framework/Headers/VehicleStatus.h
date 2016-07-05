@@ -48,6 +48,10 @@ typedef NS_ENUM(NSInteger, STATUS) {
 @property (assign, nonatomic) BOOL  horn;
 //刹车指示
 @property (assign, nonatomic) BOOL  brakeSignal;
+//P档状态
+@property (assign, nonatomic) BOOL  P;
+//钥匙开关状态
+@property (assign, nonatomic) BOOL  KSI;
 //是否有故障 YES 有故障 :  NO: 没有故障
 @property (assign, nonatomic) BOOL  faultFlag;
 //电量百分比

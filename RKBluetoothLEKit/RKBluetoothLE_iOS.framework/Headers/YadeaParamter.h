@@ -22,5 +22,7 @@
 //定时开灯结束时间 HH:mm
 @property (strong, nonatomic) NSString *endTime;
 
+//两档：0：常规，1：动力档
+@property (assign, nonatomic) Byte gears;
 
 @end

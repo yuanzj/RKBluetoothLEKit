@@ -7,7 +7,6 @@
 //
 
 #import "RKAppDelegate.h"
-#import "CocoaSecurity.h"
 
 @interface RKAppDelegate (){
     
@@ -24,10 +23,6 @@
     self.mRkBluetoothClient = [RkBluetoothClient shareClient];
     
     self.mRk4102ApiService = [self.mRkBluetoothClient createRk4102ApiService];
-    [self.mRk4102ApiService setPostAuthCodeBlock:^(NSString *peripheralName){
-        CocoaSecurityDecoder *mCocoaSecurityDecoder = [[CocoaSecurityDecoder alloc] init];
-        return [mCocoaSecurityDecoder base64:@"M8Cjz3SFrA2XBefwzj/1Ug=="];
-    }];
     
     authResultSignalDisposable = [[[self.mRk4102ApiService authResultSignal] deliverOn:[RACScheduler mainThreadScheduler]]
                                   subscribeNext:^(NSNotification *response) {
@@ -45,7 +40,10 @@
                                   }];
     
     self.mYadeaApiService = [[YadeaApiService alloc] initWithRk4102ApiService:self.mRk4102ApiService];
-    
+    [self.mYadeaApiService setPostAuthCodeBlock:^(NSString *peripheralName){
+        
+        return @"M8Cjz3SFrA2XBefwzj/1Ug==";
+    }];
     return YES;
 }
 

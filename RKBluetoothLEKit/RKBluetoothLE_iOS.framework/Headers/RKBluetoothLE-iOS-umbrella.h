@@ -30,6 +30,7 @@
 #import "RkFieldConverter.h"
 #import "RKFrame.h"
 #import "RKPackage.h"
+#import "RSA.h"
 #import "UpgradeManager.h"
 #import "UpgradeProgress.h"
 #import "VehicleStatus.h"
