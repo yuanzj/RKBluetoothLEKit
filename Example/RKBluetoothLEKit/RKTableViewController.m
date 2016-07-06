@@ -32,11 +32,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     dataSrc = @[@"上电",@"断电",@"寻车",@"车辆状态",@"故障检测",@"个性化配置",@"来电、短信仪表显示",@"获取个性化参数"];
-    
-    [RK4102APIServiceImpl setPostAuthCodeBlock:^(NSString *peripheralName){
-        CocoaSecurityDecoder *mCocoaSecurityDecoder = [[CocoaSecurityDecoder alloc] init];
-        return [mCocoaSecurityDecoder base64:@"M8Cjz3SFrA2XBefwzj/1Ug=="];
-    }];
+
 
 }
 
@@ -187,8 +183,11 @@
 
 -(void)getCustomParamter{
     
-    [[YadeaApiServiceImpl getCustomParameter:@"B00GDV5DZ3" ] subscribeNext:^(YadeaParamter *response){
+    [[[YadeaApiServiceImpl getCustomParameter:@"B00GDV5DZ3" ]deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(YadeaParamter *response){
         NSLog(@"%@",[response description]);
+        
+        [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
+        
     } error:^(NSError *error){
         
     }];
@@ -202,10 +201,12 @@
     mYadeaParamter.startTime = @"17:00";
     mYadeaParamter.endTime = @"20:00";
     mYadeaParamter.gears = 1;
-    [[YadeaApiServiceImpl setCustomParameter:@"B00GDV5DZ3" parameter :mYadeaParamter] subscribeNext:^(ConfigResult *response){
+    [[[YadeaApiServiceImpl setCustomParameter:@"B00GDV5DZ3" parameter :mYadeaParamter] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(ConfigResult *response){
         
+        [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"success:%d",response.success] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
     } error:^(NSError *error){
         
+        [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"error:%@",[error localizedDescription]] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
     }];
     
 }
