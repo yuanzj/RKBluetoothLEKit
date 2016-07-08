@@ -42,7 +42,7 @@
     self.mYadeaApiService = [[YadeaApiService alloc] initWithRk4102ApiService:self.mRk4102ApiService];
     [self.mYadeaApiService setPostAuthCodeBlock:^(NSString *peripheralName){
         
-        return @"M8Cjz3SFrA2XBefwzj/1Ug==";
+        return @"uM0ySGUJzQA1oxHeIahZUw==";
     }];
     return YES;
 }
