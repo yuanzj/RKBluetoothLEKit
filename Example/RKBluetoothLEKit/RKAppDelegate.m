@@ -12,7 +12,7 @@
 @interface RKAppDelegate (){
     
     RACDisposable *authResultSignalDisposable;
-    
+    RACDisposable *connectionDisposable;
 }
 
 @end
@@ -25,6 +25,38 @@
     [self.mRkBluetoothClient setMaxTaskCount:3];
     self.mRk4102ApiService = [self.mRkBluetoothClient createRk4102ApiService];
     
+    //获取连接状态、蓝牙设备状态
+    connectionDisposable = [[[self.mRkBluetoothClient observeConnectionStateChanges]  deliverOn:[RACScheduler mainThreadScheduler]]
+                            subscribeNext:^(NSNotification *response) {
+                                
+                                if(response.userInfo){
+                                    
+                                    switch ([(NSNumber*)response.userInfo[CentralManagerStateKey] integerValue]) {
+                                        case CBCentralManagerStateUnknown:
+                                            
+                                            break;
+                                        case CBCentralManagerStateResetting:
+                                            
+                                            break;
+                                        case CBCentralManagerStateUnsupported:
+                                            NSLog(@"当前设备不支持蓝牙");
+                                            break;
+                                        case CBCentralManagerStateUnauthorized:
+                                            
+                                            break;
+                                        case CBCentralManagerStatePoweredOff:
+                                            NSLog(@"蓝牙被关闭了");
+                                            break;
+                                        case CBCentralManagerStatePoweredOn:
+                                            NSLog(@"蓝牙打开了");
+                                            break;
+                                            
+                                        default:
+                                            break;
+                                    }
+                                    
+                                }
+                            }];
     authResultSignalDisposable = [[[self.mRk4102ApiService authResultSignal] deliverOn:[RACScheduler mainThreadScheduler]]
                                   subscribeNext:^(NSNotification *response) {
                                       //鉴权成功
