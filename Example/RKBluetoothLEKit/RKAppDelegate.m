@@ -31,6 +31,7 @@
                                 
                                 if(response.userInfo){
                                     
+                                    //设备状态
                                     switch ([(NSNumber*)response.userInfo[CentralManagerStateKey] integerValue]) {
                                         case CBCentralManagerStateUnknown:
                                             
@@ -51,6 +52,34 @@
                                             NSLog(@"蓝牙打开了");
                                             break;
                                             
+                                        default:
+                                            break;
+                                    }
+                                    
+                                    //连接状态
+                                    switch ([(NSNumber*)response.userInfo[ConnectStateKey] integerValue]) {
+
+                                        case RKBLEStateDefault:
+                                            
+                                            break;
+                                        case RKBLEStateStart:
+                                            
+                                            break;
+                                        case RKBLEStateScanning:
+                                            
+                                            break;
+                                        case RKBLEStateConnecting:
+                                            
+                                            break;
+                                        case RKBLEStateConnected:
+                                            
+                                            break;
+                                        case RKBLEStateDisconnect:
+                                            
+                                            break;
+                                        case RKBLEStateFailure:
+                                            
+                                            break;
                                         default:
                                             break;
                                     }
