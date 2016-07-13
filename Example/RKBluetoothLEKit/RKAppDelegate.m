@@ -7,6 +7,7 @@
 //
 
 #import "RKAppDelegate.h"
+#import <CocoaSecurity/CocoaSecurity.h>
 
 @interface RKAppDelegate (){
     
@@ -21,7 +22,7 @@
 {
     // Override point for customization after application launch.
     self.mRkBluetoothClient = [RkBluetoothClient shareClient];
-    
+    [self.mRkBluetoothClient setMaxTaskCount:3];
     self.mRk4102ApiService = [self.mRkBluetoothClient createRk4102ApiService];
     
     authResultSignalDisposable = [[[self.mRk4102ApiService authResultSignal] deliverOn:[RACScheduler mainThreadScheduler]]
@@ -40,9 +41,16 @@
                                   }];
     
     self.mYadeaApiService = [[YadeaApiService alloc] initWithRk4102ApiService:self.mRk4102ApiService];
+    
+    //鉴权码注入方法，每次连接车辆的时候block里面的内容会自动回调
     [self.mYadeaApiService setPostAuthCodeBlock:^(NSString *peripheralName){
-        
-        return @"uM0ySGUJzQA1oxHeIahZUw==";
+        //在这里获取本地存储的当前车辆鉴权码
+        NSString *authCode = @"uM0ySGUJzQA1oxHeIahZUw==";
+        if (authCode.length > 0) {
+            return authCode;
+        } else {
+            return @"/////////////////////w==";
+        }
     }];
     return YES;
 }

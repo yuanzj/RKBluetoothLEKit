@@ -24,6 +24,8 @@
 
 @interface RequestQueue : NSObject
 
+@property (nonatomic,assign) int maxQueueCount;
+
 -(id)initWithBluetooth:(id<Bluetooth>)_Bluetooth;
 
 -(BLERequest*)add:(BLERequest*)request;

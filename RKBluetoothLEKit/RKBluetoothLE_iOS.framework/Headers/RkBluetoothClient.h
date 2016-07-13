@@ -19,6 +19,13 @@
 +(instancetype)shareClient;
 
 /**
+ *  设置列队上限
+ *
+ *  @param maxQueueCount 
+ */
+-(void)setMaxTaskCount:(int) maxQueueCount;
+
+/**
  *  获取连接状态
  *
  *  @return

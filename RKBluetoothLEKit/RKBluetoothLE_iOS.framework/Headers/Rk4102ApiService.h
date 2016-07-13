@@ -29,6 +29,11 @@
 extern NSString * const RKBLEAuthResultStatus;
 extern NSString * const RKBLEAuthResultError;
 
+//domain
+extern NSString * const TaskErrorDomain;
+//code
+extern const NSInteger TaskErrorTooBusy;
+
 //鉴权码生成器
 typedef id (^PostAuthCode)(NSString *peripheralName);
 
