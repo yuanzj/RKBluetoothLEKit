@@ -196,6 +196,14 @@
 		<data>
 		kHY9fiWIm/HaYOuoqMtKWoUrhp0=
 		</data>
+		<key>RKBluetoothLE-iOS.bundle/Info.plist</key>
+		<data>
+		1x5L2HF/KD4jDkJhE8ASNldYCiw=
+		</data>
+		<key>RKBluetoothLE-iOS.bundle/private_key.p12</key>
+		<data>
+		WXR/s41dNFk6w24H2+x7q2GPUu8=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -714,6 +722,28 @@
 			<key>hash2</key>
 			<data>
 			ja+I9jWTOJsBAuC9IIyurRLHhUsJDA3n3ekJVRODeNA=
+			</data>
+		</dict>
+		<key>RKBluetoothLE-iOS.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1x5L2HF/KD4jDkJhE8ASNldYCiw=
+			</data>
+			<key>hash2</key>
+			<data>
+			SfajY45Qb8y+HDK6VDGzOy0OPYEvNN692ts7eeSZDMg=
+			</data>
+		</dict>
+		<key>RKBluetoothLE-iOS.bundle/private_key.p12</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WXR/s41dNFk6w24H2+x7q2GPUu8=
+			</data>
+			<key>hash2</key>
+			<data>
+			5uWowEAKbdgEYG+mwVBeUcc7btBVFHbrEKVZwGg+Z+Y=
 			</data>
 		</dict>
 	</dict>

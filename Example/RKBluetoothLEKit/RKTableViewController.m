@@ -132,7 +132,7 @@
 
 -(void)powerOff{
     
-    [[YadeaApiServiceImpl powerOff:@"B00G3PC1Q4"] subscribeNext:^(RemoteControlResult *response){
+    [[YadeaApiServiceImpl powerOff:@"B00G1EE1U4"] subscribeNext:^(RemoteControlResult *response){
     
     } error:^(NSError *error){
         
@@ -142,7 +142,7 @@
 
 -(void)powerOn{
     
-    [[YadeaApiServiceImpl powerOn:@"B00G3PC1Q4"] subscribeNext:^(RemoteControlResult *response){
+    [[YadeaApiServiceImpl powerOn:@"B00G1EE1U4"] subscribeNext:^(RemoteControlResult *response){
         
     } error:^(NSError *error){
         
@@ -153,17 +153,17 @@
 
 -(void)find{
     
-    [[YadeaApiServiceImpl find:@"B00G3PC1Q4"] subscribeNext:^(RemoteControlResult *response){
+    [[YadeaApiServiceImpl find:@"B00G1EE1U4"] subscribeNext:^(RemoteControlResult *response){
         
     } error:^(NSError *error){
-        
+        NSLog(@"%@",error);
     }];
     
 }
 
 -(void)getVehicleStatus{
     
-    [[[YadeaApiServiceImpl getVehicleStatus:@"B00G3PC1Q4"] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(VehicleStatus *response){
+    [[[YadeaApiServiceImpl getVehicleStatus:@"B00G1EE1U4"] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(VehicleStatus *response){
         [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
     } error:^(NSError *error){
         
@@ -173,7 +173,7 @@
 
 -(void)getFault{
     
-    [[[YadeaApiServiceImpl getFault:@"B00G3PC1Q4"] deliverOn:[RACScheduler mainThreadScheduler]]  subscribeNext:^(YadeaFault *response){
+    [[[YadeaApiServiceImpl getFault:@"B00G1EE1U4"] deliverOn:[RACScheduler mainThreadScheduler]]  subscribeNext:^(YadeaFault *response){
         [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
     } error:^(NSError *error){
         
@@ -183,7 +183,7 @@
 
 -(void)getCustomParamter{
     
-    [[[YadeaApiServiceImpl getCustomParameter:@"B00G3PC1Q4" ]deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(YadeaParamter *response){
+    [[[YadeaApiServiceImpl getCustomParameter:@"B00G1EE1U4" ]deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(YadeaParamter *response){
         NSLog(@"%@",[response description]);
         
         [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
@@ -201,7 +201,7 @@
     mYadeaParamter.startTime = @"17:00";
     mYadeaParamter.endTime = @"20:00";
     mYadeaParamter.gears = 1;
-    [[[YadeaApiServiceImpl setCustomParameter:@"B00G3PC1Q4" parameter :mYadeaParamter] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(ConfigResult *response){
+    [[[YadeaApiServiceImpl setCustomParameter:@"B00G1EE1U4" parameter :mYadeaParamter] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(ConfigResult *response){
         
         [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"success:%d",response.success] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
     } error:^(NSError *error){
@@ -217,7 +217,7 @@
     mInstrument.telephone   = 1;
     mInstrument.SMS         = 1;
     
-    [[YadeaApiServiceImpl setInstrument:@"B00G3PC1Q4" parameter :mInstrument] subscribeNext:^(ConfigResult *response){
+    [[YadeaApiServiceImpl setInstrument:@"B00G1EE1U4" parameter :mInstrument] subscribeNext:^(ConfigResult *response){
         
     } error:^(NSError *error){
         

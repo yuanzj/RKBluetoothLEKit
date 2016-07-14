@@ -8,6 +8,7 @@
 
 #import "RKAppDelegate.h"
 #import <CocoaSecurity/CocoaSecurity.h>
+#import <RKBluetoothLE_iOS/BleLog.h>
 
 @interface RKAppDelegate (){
     
@@ -106,7 +107,7 @@
     //鉴权码注入方法，每次连接车辆的时候block里面的内容会自动回调
     [self.mYadeaApiService setPostAuthCodeBlock:^(NSString *peripheralName){
         //在这里获取本地存储的当前车辆鉴权码
-        NSString *authCode = @"uM0ySGUJzQA1oxHeIahZUw==";
+        NSString *authCode = @"546e1271ab34bce4943941cd1be7430092eb82f37963d5f012d6ed68fcf80c0e9e04f69c18c5160752fa60a8f737cb1b2fb8087b0388073fdfa61753afe6c0f3";
         if (authCode.length > 0) {
             return authCode;
         } else {
