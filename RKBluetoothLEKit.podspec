@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "RKBluetoothLEKit"
-  s.version          = "0.9.0"
+  s.version          = "0.9.1"
   s.summary          = "车精灵中控蓝牙SDK"
 
 # This description is used to generate tags and improve search results.
