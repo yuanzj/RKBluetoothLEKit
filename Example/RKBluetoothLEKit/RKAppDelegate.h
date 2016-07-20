@@ -10,10 +10,13 @@
 
 #import <RKBluetoothLE_iOS/RkBluetoothClient.h>
 #import <RKBluetoothLE_iOS/YadeaApiService.h>
+#import <RKBluetoothLE_iOS/UpgradeManager.h>
 
 #define RK4102APIServiceImpl ((RKAppDelegate*)[[UIApplication sharedApplication] delegate]).mRk4102ApiService
 
 #define YadeaApiServiceImpl ((RKAppDelegate*)[[UIApplication sharedApplication]  delegate]).mYadeaApiService
+
+#define UpgradeManagerInstance ((RKAppDelegate*)[[UIApplication sharedApplication] delegate]).mUpgradeManager
 
 @interface RKAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -24,5 +27,7 @@
 @property (strong, nonatomic) Rk4102ApiService  *mRk4102ApiService;
 
 @property (strong, nonatomic) YadeaApiService   *mYadeaApiService;
+
+@property (strong, nonatomic) UpgradeManager    *mUpgradeManager;
 
 @end

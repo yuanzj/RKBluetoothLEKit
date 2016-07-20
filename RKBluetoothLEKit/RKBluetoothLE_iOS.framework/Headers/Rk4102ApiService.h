@@ -25,6 +25,7 @@
 #import "CustomParameter.h"
 #import "Instrument.h"
 #import "YadeaParamter.h"
+#import "VersionResponse.h"
 
 extern NSString * const RKBLEAuthResultStatus;
 extern NSString * const RKBLEAuthResultError;
@@ -109,7 +110,7 @@ typedef id (^PostAuthCode)(NSString *peripheralName);
 -(RACSignal*)powerOff:(NSString*)target;
 
 #pragma mark -
-#pragma mark 车况、故障查询
+#pragma mark 车况、故障、设备信息查询
 
 /**
  *  获取车况
@@ -130,6 +131,17 @@ typedef id (^PostAuthCode)(NSString *peripheralName);
 -(RACSignal*)getFault:(NSString*)target;
 
 /**
+ *  获取版本信息
+ *
+ *  @param target type：ccu 0  ecu 1
+ *
+ *  @return VersionResponse
+ */
+-(RACSignal*)getDeviceVersion:(NSString*)target paramter:(int)type;
+
+#pragma mark -
+#pragma mark 参数配置
+/**
  *  设置中控参数
  *
  *  @param target
@@ -139,7 +151,6 @@ typedef id (^PostAuthCode)(NSString *peripheralName);
  */
 -(RACSignal*)setECUParameter:(NSString*)target parameter:(ECUParameter*)_ECUParameter;
 
-
 /**
  *  获取中控参数
  *
@@ -148,9 +159,6 @@ typedef id (^PostAuthCode)(NSString *peripheralName);
  *  @return ECUParameter
  */
 -(RACSignal*)getECUParameter:(NSString*)target;
-
-#pragma mark -
-#pragma mark 参数配置
 
 /**
  *  设置个性化参数

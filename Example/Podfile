@@ -2,6 +2,13 @@ use_frameworks!
 
 target 'RKBluetoothLEKit_Example' do
   pod 'RKBluetoothLEKit', :path => '../'
+  #键盘处理
+  pod 'IQKeyboardManager'
+  #json解析
+  pod 'JSONModel'
+  #网络
+  pod 'AFNetworking'
+  pod 'AFNetworkActivityLogger'
 end
 
 target 'RKBluetoothLEKit_Tests' do

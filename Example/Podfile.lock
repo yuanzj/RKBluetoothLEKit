@@ -1,5 +1,31 @@
 PODS:
+  - AFNetworkActivityLogger (2.0.4):
+    - AFNetworking/NSURLConnection (~> 2.0)
+    - AFNetworking/NSURLSession (~> 2.0)
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
   - CocoaSecurity (1.2.4)
+  - IQKeyboardManager (4.0.4)
+  - JSONModel (1.2.0)
   - ReactiveCocoa (4.1.0):
     - ReactiveCocoa/UI (= 4.1.0)
     - Result (~> 2.0)
@@ -11,12 +37,16 @@ PODS:
   - ReactiveCocoa/UI (4.1.0):
     - ReactiveCocoa/Core
     - Result (~> 2.0)
-  - Result (2.0.0)
-  - RKBluetoothLEKit (0.1.0):
+  - Result (2.1.3)
+  - RKBluetoothLEKit (0.9.0):
     - CocoaSecurity (~> 1.2.4)
     - ReactiveCocoa (~> 4.1.0)
 
 DEPENDENCIES:
+  - AFNetworkActivityLogger
+  - AFNetworking
+  - IQKeyboardManager
+  - JSONModel
   - RKBluetoothLEKit (from `../`)
 
 EXTERNAL SOURCES:
@@ -24,11 +54,15 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
+  AFNetworkActivityLogger: 121486778117d53b3ab1c61d264b88081d0c3eee
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
+  IQKeyboardManager: 4a6f83b540283c2645aaeba2bd8dc0f09b5c77f8
+  JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   ReactiveCocoa: d70004d7a366a7b8e87e60ce2347182c77701949
-  Result: 9e75e1111c774c6ac594e14907b15057053a7959
-  RKBluetoothLEKit: 9d452ea187774147baaa5ea005fdd4273b44b1fc
+  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
+  RKBluetoothLEKit: c435901289590077a51d72c3880ddfe4733bb7fb
 
-PODFILE CHECKSUM: b36756bd387ef2939fa99bbbea0b8695c3aa3358
+PODFILE CHECKSUM: 80dd6d89379dd3b92444b07e64d9bfdac73cafd9
 
-COCOAPODS: 1.0.0.rc.1
+COCOAPODS: 1.0.0.rc.2

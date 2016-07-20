@@ -16,6 +16,9 @@
 
     NSArray *dataSrc;
     
+    NSString *ueSN;
+    NSString *macAddress;
+    
 }
 
 @end
@@ -30,8 +33,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    ueSN = [user objectForKey:@"SN"];
+    macAddress = [user objectForKey:@"MAC"];
     
-    dataSrc = @[@"上电",@"断电",@"寻车",@"车辆状态",@"故障检测",@"个性化配置",@"来电、短信仪表显示",@"获取个性化参数"];
+    dataSrc = @[@"上电",@"断电",@"寻车",@"车辆状态",@"故障检测",@"个性化配置",@"来电、短信仪表显示",@"获取个性化参数",@"固件升级",@"读取版本号"];
 
 
 }
@@ -123,8 +129,12 @@
         case 7:
             [self getCustomParamter];
             break;
-            
-            
+        case 8:
+            [self update];
+            break;
+        case 9:
+            [self readVersion];
+            break;
         default:
             break;
     }
@@ -132,7 +142,7 @@
 
 -(void)powerOff{
     
-    [[YadeaApiServiceImpl powerOff:@"B00G1EE1U4"] subscribeNext:^(RemoteControlResult *response){
+    [[YadeaApiServiceImpl powerOff:ueSN] subscribeNext:^(RemoteControlResult *response){
     
     } error:^(NSError *error){
         
@@ -142,7 +152,7 @@
 
 -(void)powerOn{
     
-    [[YadeaApiServiceImpl powerOn:@"B00G1EE1U4"] subscribeNext:^(RemoteControlResult *response){
+    [[YadeaApiServiceImpl powerOn:ueSN] subscribeNext:^(RemoteControlResult *response){
         
     } error:^(NSError *error){
         
@@ -153,7 +163,7 @@
 
 -(void)find{
     
-    [[YadeaApiServiceImpl find:@"B00G1EE1U4"] subscribeNext:^(RemoteControlResult *response){
+    [[YadeaApiServiceImpl find:ueSN] subscribeNext:^(RemoteControlResult *response){
         
     } error:^(NSError *error){
         NSLog(@"%@",error);
@@ -163,7 +173,7 @@
 
 -(void)getVehicleStatus{
     
-    [[[YadeaApiServiceImpl getVehicleStatus:@"B00G1EE1U4"] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(VehicleStatus *response){
+    [[[YadeaApiServiceImpl getVehicleStatus:ueSN] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(VehicleStatus *response){
         [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
     } error:^(NSError *error){
         
@@ -173,7 +183,7 @@
 
 -(void)getFault{
     
-    [[[YadeaApiServiceImpl getFault:@"B00G1EE1U4"] deliverOn:[RACScheduler mainThreadScheduler]]  subscribeNext:^(YadeaFault *response){
+    [[[YadeaApiServiceImpl getFault:ueSN] deliverOn:[RACScheduler mainThreadScheduler]]  subscribeNext:^(YadeaFault *response){
         [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
     } error:^(NSError *error){
         
@@ -183,7 +193,7 @@
 
 -(void)getCustomParamter{
     
-    [[[YadeaApiServiceImpl getCustomParameter:@"B00G1EE1U4" ]deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(YadeaParamter *response){
+    [[[YadeaApiServiceImpl getCustomParameter:ueSN ]deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(YadeaParamter *response){
         NSLog(@"%@",[response description]);
         
         [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
@@ -201,7 +211,7 @@
     mYadeaParamter.startTime = @"17:00";
     mYadeaParamter.endTime = @"20:00";
     mYadeaParamter.gears = 1;
-    [[[YadeaApiServiceImpl setCustomParameter:@"B00G1EE1U4" parameter :mYadeaParamter] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(ConfigResult *response){
+    [[[YadeaApiServiceImpl setCustomParameter:ueSN parameter :mYadeaParamter] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(ConfigResult *response){
         
         [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"success:%d",response.success] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
     } error:^(NSError *error){
@@ -217,7 +227,7 @@
     mInstrument.telephone   = 1;
     mInstrument.SMS         = 1;
     
-    [[YadeaApiServiceImpl setInstrument:@"B00G1EE1U4" parameter :mInstrument] subscribeNext:^(ConfigResult *response){
+    [[YadeaApiServiceImpl setInstrument:ueSN parameter :mInstrument] subscribeNext:^(ConfigResult *response){
         
     } error:^(NSError *error){
         
@@ -225,6 +235,21 @@
     
 }
 
+
+-(void)update{
+    [self performSegueWithIdentifier:@"update" sender:self];
+}
+
+-(void)readVersion{
+    [[[RK4102APIServiceImpl getDeviceVersion:ueSN paramter:VERSION_TYPE_ECU]deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(YadeaParamter *response){
+        NSLog(@"%@",[response description]);
+        
+        [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
+        
+    } error:^(NSError *error){
+        NSLog(@"%@",error);
+    }];
+}
 /*
 #pragma mark - Navigation
 

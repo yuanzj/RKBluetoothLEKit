@@ -98,7 +98,7 @@
 		</data>
 		<key>Headers/RKBluetoothLE-iOS-umbrella.h</key>
 		<data>
-		6jnhxPRYDEw98LWMNP6FyNkz73E=
+		ug9vT+fDXYUDCCDp/KIEsCW/b6Y=
 		</data>
 		<key>Headers/RKFrame.h</key>
 		<data>
@@ -146,7 +146,7 @@
 		</data>
 		<key>Headers/Rk4102ApiService.h</key>
 		<data>
-		kb3mpzCzcfObFl2hZk63Igqfa/I=
+		av8FRpJ1K6UO0euOol5vF1nRgXc=
 		</data>
 		<key>Headers/RkBluetoothClient.h</key>
 		<data>
@@ -172,6 +172,10 @@
 		<data>
 		+JCocRBGKMXtuFRw2EAPBEYns2E=
 		</data>
+		<key>Headers/VersionResponse.h</key>
+		<data>
+		omaWTrXPdEVGKTYwBLtUtfwN9jA=
+		</data>
 		<key>Headers/YadeaApiService.h</key>
 		<data>
 		FR6rwnLF8q7GE31R1QuFtbByZSE=
@@ -190,7 +194,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		RLWd/8vwGgv0yHGFLVmY/2V/AhM=
+		kxUTp64YEMxPHlqeVek5TVaf728=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -198,7 +202,7 @@
 		</data>
 		<key>RKBluetoothLE-iOS.bundle/Info.plist</key>
 		<data>
-		1x5L2HF/KD4jDkJhE8ASNldYCiw=
+		TiqfyaJC9gcIft39C78+UD4TcN8=
 		</data>
 		<key>RKBluetoothLE-iOS.bundle/private_key.p12</key>
 		<data>
@@ -464,11 +468,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6jnhxPRYDEw98LWMNP6FyNkz73E=
+			ug9vT+fDXYUDCCDp/KIEsCW/b6Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			WPz6e7ubXDaMEKq6qIXUImzM/0cSCGodNBzLHwKCgcU=
+			71f5IofypQDgTfeSGBFUFLowiqEl7boX87qnldJMqqM=
 			</data>
 		</dict>
 		<key>Headers/RKFrame.h</key>
@@ -596,11 +600,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kb3mpzCzcfObFl2hZk63Igqfa/I=
+			av8FRpJ1K6UO0euOol5vF1nRgXc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Om4Xuq64G4clE5ZDuwodHW4tDCi+YOBSJKkOxmMSkSw=
+			WPJfk5Tsi8cghOf9Z9sIwIU7qSDeiQ8U/IhvgDLktMs=
 			</data>
 		</dict>
 		<key>Headers/RkBluetoothClient.h</key>
@@ -669,6 +673,17 @@
 			HoVMsIHPOYN4ILLtRJYFiR2uZ2G1ad337fVcWq04i/o=
 			</data>
 		</dict>
+		<key>Headers/VersionResponse.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			omaWTrXPdEVGKTYwBLtUtfwN9jA=
+			</data>
+			<key>hash2</key>
+			<data>
+			hb6l3R+3jVeh+ThZUjkFVFBefTrhuJgab6FJZbjB/7k=
+			</data>
+		</dict>
 		<key>Headers/YadeaApiService.h</key>
 		<dict>
 			<key>hash</key>
@@ -728,11 +743,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1x5L2HF/KD4jDkJhE8ASNldYCiw=
+			TiqfyaJC9gcIft39C78+UD4TcN8=
 			</data>
 			<key>hash2</key>
 			<data>
-			SfajY45Qb8y+HDK6VDGzOy0OPYEvNN692ts7eeSZDMg=
+			wt38NpwEqvdXzNliKbi9yNn6AUiQ5MFOS1Xiz7i5Zqs=
 			</data>
 		</dict>
 		<key>RKBluetoothLE-iOS.bundle/private_key.p12</key>

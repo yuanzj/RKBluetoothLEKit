@@ -34,6 +34,7 @@
 #import "UpgradeManager.h"
 #import "UpgradeProgress.h"
 #import "VehicleStatus.h"
+#import "VersionResponse.h"
 #import "RequestQueue.h"
 #import "Response.h"
 #import "ResponseDelivery.h"
