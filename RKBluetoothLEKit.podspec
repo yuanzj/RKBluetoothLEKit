@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "RKBluetoothLEKit"
-  s.version          = "1.0.0"
-  s.summary          = "车精灵中控蓝牙SDK"
+  s.version          = "0.9.2"
+  s.summary          = "RK BLE SDK"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-车精灵中控蓝牙SDK,提供车辆操控、个性化、自检等功能。API调用模式使用了RAC
+RK BLE SDK
                        DESC
 
   s.homepage         = "https://github.com/yuanzj/RKBluetoothLEKit"
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'Foundation', 'CoreBluetooth'
-  s.dependency 'ReactiveCocoa', '~> 4.1.0'
+  s.dependency 'ReactiveCocoa', '~> 4.2.1'
   s.dependency 'CocoaSecurity', '~> 1.2.4'
   s.vendored_frameworks = 'RKBluetoothLEKit/*.{framework}'
   
