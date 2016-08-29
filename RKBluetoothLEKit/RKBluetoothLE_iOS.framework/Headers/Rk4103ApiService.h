@@ -15,7 +15,7 @@
 #import "RKPackage.h"
 #import "RKFrame.h"
 #import "VehicleStatus.h"
-#import "Fault_Rk4102.h"
+#import "Fault_Rk4103.h"
 #import "ECUParameter.h"
 #import "ConfigResult.h"
 #import "RequestUpgradeResponse.h"
@@ -27,10 +27,8 @@
 #import "YadeaParamter.h"
 #import "VersionResponse.h"
 #import "RKBLEConstants.h"
-#import "Rk4102BleProtocolImpl.h"
 
-
-@interface Rk4102ApiService : NSObject
+@interface Rk4103ApiService : NSObject
 
 @property(nonatomic,copy)PostAuthCode postAuthCodeBlock;
 
@@ -118,7 +116,7 @@
  *
  *  @param target
  *
- *  @return Fault
+ *  @return Fault_Rk4103
  */
 -(RACSignal*)getFault:(NSString*)target;
 

@@ -138,9 +138,6 @@ typedef void (^RequestErrorBlock)(NSError * error);
 
 @property (nonatomic,copy            ) parseBLEResponseData parseBLEResponseData;
 
-+(void)setLogEnable:(BOOL)enable;
-
-+(BOOL)logEnable;
 
 -(instancetype)initWithTarget:(NSDictionary*)target
 method:(RKBLEMethod) method

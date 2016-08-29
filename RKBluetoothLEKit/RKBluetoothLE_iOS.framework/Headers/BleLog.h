@@ -10,6 +10,10 @@
 
 @interface BleLog : NSObject
 
++(BOOL)getLogEnable;
+
++(void)setLogEnable:(BOOL)enable;
+
 +(void)addMarker:(NSString*)mark;
 
 @end
