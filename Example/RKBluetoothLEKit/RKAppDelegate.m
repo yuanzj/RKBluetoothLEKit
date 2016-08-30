@@ -11,8 +11,12 @@
 #import <RKBluetoothLE_iOS/BleLog.h>
 
 //    M8Cjz3SFrA3R0LAzBB9xGA==
+//
 //    B00GDV5DZ3
 
+
+//B00G10B6F3 C0:27:15:09:A7:E6 Q1NsmKbbaf+mfktSpyNJ5w==
+//
 @interface RKAppDelegate (){
     
     RACDisposable *authResultSignalDisposable;
