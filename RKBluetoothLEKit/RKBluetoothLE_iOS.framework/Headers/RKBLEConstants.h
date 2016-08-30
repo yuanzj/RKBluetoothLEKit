@@ -61,7 +61,8 @@ static NSString* const SPIRIT_SET_PARAM         = @"9801";
 
 #pragma mark - BLOCK
 //鉴权码生成器
-typedef id (^PostAuthCode)(NSString *peripheralName);
+typedef void (^ProvideAuthCodeBlock)(NSString *authCode);
+typedef void (^AuthCodeBlock)(NSString *peripheralName ,ProvideAuthCodeBlock autoCode);
 
 
 @interface RKBLEConstants : NSObject

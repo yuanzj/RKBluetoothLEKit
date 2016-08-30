@@ -18,7 +18,7 @@
 
 @interface Rk4102BleProtocolImpl : NSObject<BLEDataParseProtocol>
 
-@property(nonatomic,copy)PostAuthCode postAuthCode;
+@property(nonatomic,copy)AuthCodeBlock postAuthCode;
 
 @end
 

@@ -32,7 +32,7 @@
 
 @interface Rk4102ApiService : NSObject
 
-@property(nonatomic,copy)PostAuthCode postAuthCodeBlock;
+@property(nonatomic,copy)AuthCodeBlock postAuthCodeBlock;
 
 -(id)initWithRequestQueue:(RequestQueue *)mRequestQueue;
 

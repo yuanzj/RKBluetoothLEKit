@@ -22,7 +22,7 @@
  *
  *  @param postAuthCode
  */
--(void)setPostAuthCodeBlock:(PostAuthCode)postAuthCode;
+-(void)setPostAuthCodeBlock:(AuthCodeBlock)postAuthCode;
 
 #pragma mark -
 #pragma mark 遥控器控制类指令
