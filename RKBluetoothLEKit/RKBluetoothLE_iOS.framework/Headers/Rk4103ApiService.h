@@ -27,6 +27,8 @@
 #import "YadeaParamter.h"
 #import "VersionResponse.h"
 #import "RKBLEConstants.h"
+#import "DCUParameter.h"
+#import "ClearMileage.h"
 
 @interface Rk4103ApiService : NSObject
 
@@ -103,6 +105,26 @@
 #pragma mark 车况、故障、设备信息查询
 
 /**
+ *  开启\关闭 服务
+ *
+ *  @param target
+ *  @param DCUParameter
+ *
+ *  @return ConfigResult
+ */
+-(RACSignal*)setDCUParameter:(NSString*)target parameter:(DCUParameter*)_DCUParameter;
+
+/**
+ *  获取DCU参数
+ *
+ *  @param target
+ *  @param DCUParameter
+ *
+ *  @return ConfigResult
+ */
+-(RACSignal*)getDCUParameter:(NSString*)target parameter:(DCUParameter*)_DCUParameter;
+
+/**
  *  获取车况
  *
  *  @param target
@@ -131,6 +153,17 @@
 
 #pragma mark -
 #pragma mark 参数配置
+
+/**
+ *  清除中控总里程
+ *
+ *  @param target
+ *  @param ClearMileage
+ *
+ *  @return ConfigResult
+ */
+-(RACSignal*)setClearMileage:(NSString*)target parameter:(ClearMileage*)_ClearMileage;
+
 /**
  *  设置中控参数
  *

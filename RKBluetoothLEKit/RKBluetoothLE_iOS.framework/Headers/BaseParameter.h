@@ -30,6 +30,7 @@
 #define  RK410_ENABLE_SERVICE 0x15
 #define  RK410_CUSTOM_CONFIG  0x17
 #define  RK410_INSTRUMENT     0x18
+#define  RK410_CLEAR_MILEAGE  0x19
 #define  RK410_VERSION        0xF1
 
 @interface BaseParameter : NSObject<RkFieldConverter>
