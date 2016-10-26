@@ -121,9 +121,9 @@
         NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
         NSString *authCode = [user objectForKey:@"AUTH"];
         if (authCode.length > 0) {
-            postAuthCode(authCode);
+            postAuthCode(authCode,nil);
         } else {
-            postAuthCode(@"/////////////////////w==");
+            postAuthCode(@"/////////////////////w==",nil);
         }
     }];
     return YES;
