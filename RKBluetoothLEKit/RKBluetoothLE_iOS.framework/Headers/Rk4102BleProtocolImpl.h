@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CocoaSecurity.h"
+#import <CocoaSecurity/CocoaSecurity.h>
 #import "RKBLEUtil.h"
 #import "BLERequest.h"
 #import "ByteConvert.h"

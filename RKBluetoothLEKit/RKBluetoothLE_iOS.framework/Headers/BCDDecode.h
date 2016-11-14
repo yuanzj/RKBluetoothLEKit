@@ -10,6 +10,8 @@
 
 @interface BCDDecode : NSObject
 
++(NSString*) bcd2Str1:(NSData*) bytes;
+
 /**
  * @功能: BCD码转为10进制串(阿拉伯数据)
  * @参数: BCD码
