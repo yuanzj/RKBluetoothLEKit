@@ -23,19 +23,24 @@ RKBleSDK提供的功能如下：
 ### 配置开发环境
 自动配置.framework形式开发包（使用CocoaPods）
 注：此种方式只支持导入全量包的SDK，包含锐祺蓝牙iOS SDK所有功能
-一、前提：安装CocoaPods
+
+1、前提：安装CocoaPods
 在终端输入
-'' sudo gem install cocoapods
+```
+sudo gem install cocoapods
+```
 如果安装成功，会有一个提示
-'' Successfully installed cocoaPods
-二、使用CocoaPods导入蓝牙 SDK
+```
+Successfully installed cocoaPods
+```
+2、使用CocoaPods导入蓝牙 SDK
 在当前工程文件（.xcodeproj）所在文件夹下，打开terminal
 1.创建Podfile：
 touch Podfile
 2.编辑Podfile内容如下：
 
 ```
-pod 'RKBluetoothLEKit', '~> 3.0.0'  #蓝牙 SDK==
+pod 'RKBluetoothLEKit', '~> 3.0.0'  #蓝牙 SDK
 ```
 
 3.在Podfile所在的文件夹下输入命令：
