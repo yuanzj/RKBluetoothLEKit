@@ -1,6 +1,6 @@
 {
   "name": "RKBluetoothLEKit",
-  "version": "1.1.0",
+  "version": "3.1.0",
   "summary": "RK BLE SDK",
   "description": "RK BLE SDK",
   "homepage": "https://github.com/yuanzj/RKBluetoothLEKit",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/yuanzj/RKBluetoothLEKit.git",
-    "tag": "1.1.0"
+    "tag": "3.1.0"
   },
   "platforms": {
     "ios": "8.0"
