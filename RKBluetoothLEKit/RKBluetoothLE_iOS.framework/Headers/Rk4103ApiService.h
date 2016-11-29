@@ -29,6 +29,8 @@
 #import "RKBLEConstants.h"
 #import "DCUParameter.h"
 #import "ClearMileage.h"
+#import "UEVersionResponse.h"
+#import "UEUDID.h"
 
 @interface Rk4103ApiService : NSObject
 
@@ -145,11 +147,20 @@
 /**
  *  获取版本信息
  *
- *  @param target type：ccu 0  ecu 1
+ *  @param target type：0 ：CCU  1:ECU  2:PCU
  *
- *  @return VersionResponse
+ *  @return UEVersionResponse
  */
 -(RACSignal*)getDeviceVersion:(NSString*)target paramter:(int)type;
+
+/**
+ *  获取设备UDID
+ *
+ *  @param target type：1:ECU  2:PCU
+ *
+ *  @return UEUDID
+ */
+-(RACSignal*)getDeviceUDID:(NSString*)target paramter:(int)type;
 
 #pragma mark -
 #pragma mark 参数配置

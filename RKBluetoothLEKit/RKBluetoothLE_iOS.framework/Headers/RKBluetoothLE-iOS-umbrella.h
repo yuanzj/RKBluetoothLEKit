@@ -1,4 +1,14 @@
+#ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
+#endif
+#endif
+#endif
 
 #import "BleLog.h"
 #import "BLERequest.h"
@@ -38,6 +48,8 @@
 #import "RKFrame.h"
 #import "RKPackage.h"
 #import "RSA.h"
+#import "UEUDID.h"
+#import "UEVersionResponse.h"
 #import "UpgradeManager.h"
 #import "UpgradeProgress.h"
 #import "VehicleStatus.h"
