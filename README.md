@@ -40,7 +40,7 @@ touch Podfile
 2.编辑Podfile内容如下：
 
 ```
-pod 'RKBluetoothLEKit', '~> 3.1.0'  #蓝牙 SDK
+pod 'RKBluetoothLEKit', '~> 3.1.1'  #蓝牙 SDK
 ```
 
 3.在Podfile所在的文件夹下输入命令：
