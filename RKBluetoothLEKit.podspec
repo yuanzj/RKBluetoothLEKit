@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "RKBluetoothLEKit"
-  s.version          = "3.1.2"
+  s.version          = "3.1.3"
   s.summary          = "RK BLE SDK"
 
 # This description is used to generate tags and improve search results.
@@ -40,7 +40,7 @@ RK BLE SDK
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'Foundation', 'CoreBluetooth'
-  s.dependency 'ReactiveCocoa', '~> 4.2.1'
+  s.dependency 'ReactiveObjC', '~> 3.0.0'
   s.dependency 'CocoaSecurity', '~> 1.2.4'
   s.vendored_frameworks = 'RKBluetoothLEKit/*.{framework}'
   

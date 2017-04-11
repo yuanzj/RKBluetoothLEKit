@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "RequestQueue.h"
 #import "BLEStack.h"
 #import "RemoteControlResult.h"
@@ -31,6 +31,7 @@
 #import "ClearMileage.h"
 #import "UEVersionResponse.h"
 #import "UEUDID.h"
+#import "SyncTime.h"
 
 @interface Rk4103ApiService : NSObject
 
@@ -288,5 +289,10 @@
  *  @return
  */
 -(RACSignal*)reboot:(NSString*)target;
+
+/**
+ *  同步时间
+ */
+-(RACSignal*)syncTime:(NSString*)target parameter:(SyncTime*)_SyncTime;
 
 @end

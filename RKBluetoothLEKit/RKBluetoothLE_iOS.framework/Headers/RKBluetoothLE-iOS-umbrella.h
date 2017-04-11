@@ -48,6 +48,7 @@
 #import "RKFrame.h"
 #import "RKPackage.h"
 #import "RSA.h"
+#import "SyncTime.h"
 #import "UEUDID.h"
 #import "UEVersionResponse.h"
 #import "UpgradeManager.h"
