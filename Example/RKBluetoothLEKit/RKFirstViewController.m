@@ -55,12 +55,6 @@
     
 }
 
--(IBAction)onClickEnterTestList:(id)sender{
-    [self performSegueWithIdentifier:@"enterTestList" sender:sender];
-}
-
-
-
 -(void)scanReult:(NSString*)value{
     
     NSArray<NSString*> *data = [value componentsSeparatedByString:@" "];
@@ -72,6 +66,18 @@
         [user synchronize];
         isScanOk = YES;
         [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+-(IBAction)enterIntoTestList:(id)sender{
+    if(self.mUITextField.text.length > 0){
+        
+        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+        [user setObject:self.mUITextField.text forKey:@"SN"];
+        [user synchronize];
+        isScanOk = YES;
+
+        [self performSegueWithIdentifier:@"enterTestList" sender:sender];
     }
 }
 

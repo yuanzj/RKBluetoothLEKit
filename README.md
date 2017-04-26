@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/RKBluetoothLEKit.svg?style=flat)](http://cocoapods.org/pods/RKBluetoothLEKit)
 [![Platform](https://img.shields.io/cocoapods/p/RKBluetoothLEKit.svg?style=flat)](http://cocoapods.org/pods/RKBluetoothLEKit)
 ## 概述
-### 锐祺蓝牙iOS SDK V3.1.0
+### 锐祺蓝牙iOS SDK V3.1.5
 锐祺蓝牙iOS SDK是一套基于iOS8.0及以上版本设备的应用程序接口，不仅提供基本的上电、断电、设防、撤防、寻车、开启座桶遥控操作指令，还提供当前车况信息查询服务如总里程、剩余电量、车辆状态等。
 在蓝牙连接成功的状态下会自动根据一定的策略进行数据上报充分保证服务器采集到的车辆信息为最新状态。
 
@@ -40,7 +40,7 @@ touch Podfile
 2.编辑Podfile内容如下：
 
 ```
-pod 'RKBluetoothLEKit', '~> 3.1.1'  #蓝牙 SDK
+pod 'RKBluetoothLEKit', '~> 3.1.5'  #蓝牙 SDK
 ```
 
 3.在Podfile所在的文件夹下输入命令：
@@ -54,7 +54,7 @@ pod install
 调用代码如下：
 
 ```
-[[YadeaApiServiceImpl powerOn:ueSN] subscribeNext:^(RemoteControlResult *response){
+[[RK4103APIServiceImpl powerOn:ueSN] subscribeNext:^(RemoteControlResult *response){
 
 } error:^(NSError *error){
 
@@ -66,7 +66,7 @@ pod install
 调用代码如下：
 
 ```
-[[YadeaApiServiceImpl powerOff:ueSN] subscribeNext:^(RemoteControlResult *response){
+[[RK4103APIServiceImpl powerOff:ueSN] subscribeNext:^(RemoteControlResult *response){
 
 } error:^(NSError *error){
 
@@ -77,7 +77,7 @@ pod install
 调用代码如下：
 
 ```
-[[YadeaApiServiceImpl find:ueSN] subscribeNext:^(RemoteControlResult *response){
+[[RK4103APIServiceImpl find:ueSN] subscribeNext:^(RemoteControlResult *response){
 
 } error:^(NSError *error){
 NSLog(@"%@",error);
@@ -88,7 +88,7 @@ NSLog(@"%@",error);
 调用代码如下：
 
 ```
-[[[YadeaApiServiceImpl getVehicleStatus:ueSN] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(VehicleStatus *response){
+[[[RK4103APIServiceImpl getVehicleStatus:ueSN] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(VehicleStatus *response){
 [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
 } error:^(NSError *error){
 
@@ -99,7 +99,7 @@ NSLog(@"%@",error);
 调用代码如下：
 
 ```
-[[[YadeaApiServiceImpl getFault:ueSN] deliverOn:[RACScheduler mainThreadScheduler]]  subscribeNext:^(YadeaFault *response){
+[[[RK4103APIServiceImpl getFault:ueSN] deliverOn:[RACScheduler mainThreadScheduler]]  subscribeNext:^(Fault_Rk4103 *response){
 [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
 } error:^(NSError *error){
 
@@ -110,7 +110,7 @@ NSLog(@"%@",error);
 调用代码如下：
 
 ```
-[[[RK4102APIServiceImpl getDeviceVersion:ueSN paramter:VERSION_TYPE_ECU]deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(YadeaParamter *response){
+[[[RK4103APIServiceImpl getDeviceVersion:ueSN paramter:VERSION_TYPE_ECU]deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(YadeaParamter *response){
 NSLog(@"%@",[response description]);
 
 [[[UIAlertView alloc] initWithTitle:nil message:[response description] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
@@ -130,7 +130,7 @@ mYadeaParamter.autoCloseLight = 30;
 mYadeaParamter.startTime = @"17:00";
 mYadeaParamter.endTime = @"20:00";
 mYadeaParamter.gears = 1;
-[[[YadeaApiServiceImpl setCustomParameter:ueSN parameter :mYadeaParamter] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(ConfigResult *response){
+[[[RK4103APIServiceImpl setCustomParameter:ueSN parameter :mYadeaParamter] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(ConfigResult *response){
 
 [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"success:%d",response.success] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil] show];
 } error:^(NSError *error){

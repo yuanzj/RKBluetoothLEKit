@@ -9,12 +9,9 @@
 @import UIKit;
 
 #import <RKBluetoothLE_iOS/RkBluetoothClient.h>
-#import <RKBluetoothLE_iOS/YadeaApiService.h>
 #import <RKBluetoothLE_iOS/UpgradeManager.h>
 
-#define RK4102APIServiceImpl ((RKAppDelegate*)[[UIApplication sharedApplication] delegate]).mRk4102ApiService
-
-#define YadeaApiServiceImpl ((RKAppDelegate*)[[UIApplication sharedApplication]  delegate]).mYadeaApiService
+#define RK4103APIServiceImpl ((RKAppDelegate*)[[UIApplication sharedApplication] delegate]).mRk4103ApiService
 
 #define UpgradeManagerInstance ((RKAppDelegate*)[[UIApplication sharedApplication] delegate]).mUpgradeManager
 
@@ -23,11 +20,9 @@
 @property (strong, nonatomic) UIWindow          *window;
 
 @property (strong, nonatomic) RkBluetoothClient *mRkBluetoothClient;
-
-@property (strong, nonatomic) Rk4102ApiService  *mRk4102ApiService;
-
-@property (strong, nonatomic) YadeaApiService   *mYadeaApiService;
-
+//蓝牙接口（第三方请关注此接口的相关方法）
+@property (strong, nonatomic) Rk4103ApiService  *mRk4103ApiService;
+//蓝牙固件升级
 @property (strong, nonatomic) UpgradeManager    *mUpgradeManager;
 
 @end

@@ -19,7 +19,6 @@
 //
 @interface RKAppDelegate (){
     
-    RACDisposable *authResultSignalDisposable;
     RACDisposable *connectionDisposable;
 }
 
@@ -31,8 +30,7 @@
     // Override point for customization after application launch.
     self.mRkBluetoothClient = [RkBluetoothClient shareClient];
     [self.mRkBluetoothClient setMaxTaskCount:3];
-    self.mRk4102ApiService = [self.mRkBluetoothClient createRk4102ApiService];
-    self.mUpgradeManager = [[UpgradeManager alloc] initWithAPIService:self.mRk4102ApiService];
+    self.mRk4103ApiService = [self.mRkBluetoothClient createRk4103ApiService];
     
     //获取连接状态、蓝牙设备状态
     connectionDisposable = [[[self.mRkBluetoothClient observeConnectionStateChanges]  deliverOn:[RACScheduler mainThreadScheduler]]
@@ -95,31 +93,11 @@
                                     
                                 }
                             }];
-    authResultSignalDisposable = [[[self.mRk4102ApiService authResultSignal] deliverOn:[RACScheduler mainThreadScheduler]]
-                                  subscribeNext:^(NSNotification *response) {
-                                      //鉴权成功
-                                      if(response.userInfo[RKBLEAuthResultStatus]){
-                                          NSLog(@"鉴权成功");
-                                          //更新本地标志位，标示下一次鉴权使用FF鉴权
-                                          
-                                      } else {
-                                          //鉴权失败
-                                          NSLog(@"鉴权失败");
-                                          //更新本地标志位，标示下一次鉴权使用鉴权码鉴权
-                                          
-                                      }
-                                  }];
-    
-    self.mYadeaApiService = [[YadeaApiService alloc] initWithRk4102ApiService:self.mRk4102ApiService];
-    
-    
-    
+   
     //鉴权码注入方法，每次连接车辆的时候block里面的内容会自动回调
-    [self.mYadeaApiService setPostAuthCodeBlock:^(NSString *peripheralName , ProvideAuthCodeBlock postAuthCode){
-        //在这里获取本地存储的当前车辆鉴权码
-        
-        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-        NSString *authCode = [user objectForKey:@"AUTH"];
+    [self.mRk4103ApiService setPostAuthCodeBlock:^(NSString *peripheralName , ProvideAuthCodeBlock postAuthCode){
+        //在这里从服务器获取当前车辆的鉴权码
+        NSString *authCode = @"";
         if (authCode.length > 0) {
             postAuthCode(authCode,nil);
         } else {

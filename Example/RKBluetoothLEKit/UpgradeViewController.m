@@ -331,7 +331,7 @@ static SystemSoundID shake_sound_male_id = 0;
 
 -(IBAction)reboot:(id)sender{
     
-    [[RK4102APIServiceImpl reboot:@"B00G3PC1Q4"] subscribeNext:^(id response){
+    [[RK4103APIServiceImpl reboot:@"B00G3PC1Q4"] subscribeNext:^(id response){
     
     } error:^(NSError *error){
     
