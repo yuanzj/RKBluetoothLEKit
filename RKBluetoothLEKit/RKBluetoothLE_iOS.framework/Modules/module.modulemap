@@ -1,0 +1,6 @@
+framework module RKBluetoothLE_iOS {
+  umbrella header "RKBluetoothLE-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

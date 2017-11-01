@@ -34,6 +34,11 @@
 -(RACSignal*)observeConnectionStateChanges;
 
 /**
+ *  取消所有的队列内请求
+ */
+-(void)cancelAll;
+
+/**
  *  断开连接
  */
 -(void)disconnect;
