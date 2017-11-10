@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "RKBluetoothLEKit"
-  s.version          = "3.1.7"
+  s.version          = "3.1.8"
   s.summary          = "RK BLE SDK"
 
 # This description is used to generate tags and improve search results.
