@@ -58,7 +58,6 @@
  */
 -(RACSignal*)lock:(NSString*)target;
 
-
 /**
  *  解锁
  *
@@ -103,6 +102,15 @@
  *  @return
  */
 -(RACSignal*)powerOff:(NSString*)target;
+
+/**
+ *  强制断电
+ *
+ *  @param target
+ *
+ *  @return RemoteControlResult
+ */
+-(RACSignal*)forcePowerOff:(NSString*)target;
 
 #pragma mark -
 #pragma mark 车况、故障、设备信息查询
