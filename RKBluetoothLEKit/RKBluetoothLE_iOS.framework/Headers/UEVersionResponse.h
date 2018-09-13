@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger, UEType)
     ECU       = 1,
     PCU       = 2,
     DCU       = 3,
+    BCU       = 4,
 };
 
 @interface UEVersionResponse : BaseParameter

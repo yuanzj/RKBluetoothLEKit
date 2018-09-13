@@ -31,6 +31,8 @@
 #define  RK410_CUSTOM_CONFIG  0x17
 #define  RK410_INSTRUMENT     0x18
 #define  RK410_CLEAR_MILEAGE  0x19
+#define  RK410_BCU_Control    0x1A
+#define  RK410_BCU            0x1B
 #define  RK410_VERSION        0xF1
 #define  RK410_UDID           0xF2
 

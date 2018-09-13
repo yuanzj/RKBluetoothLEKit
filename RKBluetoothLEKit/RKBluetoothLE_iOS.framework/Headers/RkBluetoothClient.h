@@ -10,6 +10,7 @@
 #import "BLEStack.h"
 #import "Rk4102ApiService.h"
 #import "Rk4103ApiService.h"
+#import "RK44xxApiService.h"
 
 @interface RkBluetoothClient : NSObject
 /**
@@ -65,5 +66,12 @@
  *  @return
  */
 -(Rk4103ApiService*)createRk4103ApiService;
+
+/**
+ *  获取RK44xxAPIService
+ *
+ *  @return
+ */
+-(RK44xxApiService*)createRk44xxApiService;
 
 @end

@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, STATUS) {
     STATUS_DISARMING     = 1,
     STATUS_P             = 2,
     STATUS_D             = 3,
+    STATUS_D_Motionless  = 4,
     
 };
 

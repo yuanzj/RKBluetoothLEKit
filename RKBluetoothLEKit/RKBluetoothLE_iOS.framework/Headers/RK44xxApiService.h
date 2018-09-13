@@ -1,12 +1,13 @@
 //
-//  RK410BluetoothProtocol.h
+//  RK44xxApiService.h
 //  RokyinfoBLEDemo
 //
-//  Created by apple on 16/3/18.
-//  Copyright © 2016年 rokyinfo. All rights reserved.
+//  Created by virgil on 2018/9/4.
+//  Copyright © 2018年 rokyinfo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "Fault_Rk44xx.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "RequestQueue.h"
 #import "BLEStack.h"
@@ -15,7 +16,6 @@
 #import "RKPackage.h"
 #import "RKFrame.h"
 #import "VehicleStatus.h"
-#import "Fault_Rk4103.h"
 #import "ECUParameter.h"
 #import "ConfigResult.h"
 #import "RequestUpgradeResponse.h"
@@ -36,7 +36,7 @@
 #import "BcuControlParameter.h"
 #import "BCURequest.h"
 
-@interface Rk4103ApiService : NSObject
+@interface RK44xxApiService : NSObject
 
 @property(nonatomic,copy)AuthCodeBlock postAuthCodeBlock;
 
